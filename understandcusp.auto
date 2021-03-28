@@ -1,0 +1,16 @@
+demo('cusp')
+cusp = load('cusp')
+
+mu = run(cusp) + run(cusp,DS='-')
+muc = muc = r(mu('LP1'),ISW=2,ICP=['mu','lambda']) + r(mu('LP1'),ISW=2,ICP=['mu','lambda'],DS='-')
+
+mu1 = run(cusp,PAR={1:1.5}) + run(cusp,PAR={1:1.5},DS='-')
+mu1c = r(mu1('LP'),ISW=2,ICP=['mu','lambda']) + r(mu1('LP1'),ISW=2,ICP=['mu','lambda'],DS='-')
+
+mu2 = run(cusp,PAR={1:0.5}) + run(cusp,PAR={1:0.5},DS='-')
+mu2c = r(mu1('LP'),ISW=2,ICP=['mu','lambda']) + r(mu1('LP1'),ISW=2,ICP=['mu','lambda'],DS='-')
+
+p = plot(mu+mu1+mu2+muc+mu1c+mu2c, stability=True)
+p.config(bifurcation_y=['x'])
+
+wait()

@@ -1,0 +1,61 @@
+f = load('chem_Dawn_Kathy')
+pars = ['kon1','koff1','kon2','koff2','kfs','L','n','B','I_rho','L_rho','delta_rho','L_R','I_R','delta_R','alpha_R','delta_P','I_K','k_X','k_G','k_C','PIX','Paxtot','m','alpha_PAK','Rho_Square','Rac_Square','Pax_Square','PAKtot']
+#        4lp    none     2lp    none  none  4LP na  na    2LPs   2 rev    2rev       2lps  2rev   2lps      3lps     4lps      2rev  2rev 2rev  2rev   2rev   2rev   none   2rev        2rev           2lps       2lps       nothing -> ran longer: 4lps
+
+bmx = [[1759,200],[9,700],[393,700],[9,20],[9,4629],[300,1000],[1,1],[9,220],[40,60],[9,110],[9,47],[60,105],[9,60],[30,1],[9,800],[170,145],[9,2206],[9,1504],[9,2343],[9,490],[9,153],[9,115],[1,1],[9,65],[9,124],[60,1783],[140,134],[8400,1]]
+ 
+tpars = [('kon1', 'koff1'), ('kon1', 'kon2'), ('kon1', 'koff2'), ('kon1', 'kfs'), ('kon1', 'L'), ('kon1', 'n'), ('kon1', 'B'), ('kon1', 'I_rho'), ('kon1', 'L_rho'), ('kon1', 'delta_rho'), ('kon1', 'L_R'), ('kon1', 'I_R'), ('kon1', 'delta_R'), ('kon1', 'alpha_R'), ('kon1', 'delta_P'), ('kon1', 'I_K'), ('kon1', 'k_X'), ('kon1', 'k_G'), ('kon1', 'k_C'), ('kon1', 'PIX'), ('kon1', 'Paxtot'), ('kon1', 'm'), ('kon1', 'alpha_PAK'), ('kon1', 'Rho_Square'), ('kon1', 'Rac_Square'), ('kon1', 'Pax_Square'), ('kon1', 'PAKtot'), ('koff1', 'kon2'), ('koff1', 'koff2'), ('koff1', 'kfs'), ('koff1', 'L'), ('koff1', 'n'), ('koff1', 'B'), ('koff1', 'I_rho'), ('koff1', 'L_rho'), ('koff1', 'delta_rho'), ('koff1', 'L_R'), ('koff1', 'I_R'), ('koff1', 'delta_R'), ('koff1', 'alpha_R'), ('koff1', 'delta_P'), ('koff1', 'I_K'), ('koff1', 'k_X'), ('koff1', 'k_G'), ('koff1', 'k_C'), ('koff1', 'PIX'), ('koff1', 'Paxtot'), ('koff1', 'm'), ('koff1', 'alpha_PAK'), ('koff1', 'Rho_Square'), ('koff1', 'Rac_Square'), ('koff1', 'Pax_Square'), ('koff1', 'PAKtot'), ('kon2', 'koff2'), ('kon2', 'kfs'), ('kon2', 'L'), ('kon2', 'n'), ('kon2', 'B'), ('kon2', 'I_rho'), ('kon2', 'L_rho'), ('kon2', 'delta_rho'), ('kon2', 'L_R'), ('kon2', 'I_R'), ('kon2', 'delta_R'), ('kon2', 'alpha_R'), ('kon2', 'delta_P'), ('kon2', 'I_K'), ('kon2', 'k_X'), ('kon2', 'k_G'), ('kon2', 'k_C'), ('kon2', 'PIX'), ('kon2', 'Paxtot'), ('kon2', 'm'), ('kon2', 'alpha_PAK'), ('kon2', 'Rho_Square'), ('kon2', 'Rac_Square'), ('kon2', 'Pax_Square'), ('kon2', 'PAKtot'), ('koff2', 'kfs'), ('koff2', 'L'), ('koff2', 'n'), ('koff2', 'B'), ('koff2', 'I_rho'), ('koff2', 'L_rho'), ('koff2', 'delta_rho'), ('koff2', 'L_R'), ('koff2', 'I_R'), ('koff2', 'delta_R'), ('koff2', 'alpha_R'), ('koff2', 'delta_P'), ('koff2', 'I_K'), ('koff2', 'k_X'), ('koff2', 'k_G'), ('koff2', 'k_C'), ('koff2', 'PIX'), ('koff2', 'Paxtot'), ('koff2', 'm'), ('koff2', 'alpha_PAK'), ('koff2', 'Rho_Square'), ('koff2', 'Rac_Square'), ('koff2', 'Pax_Square'), ('koff2', 'PAKtot'), ('kfs', 'L'), ('kfs', 'n'), ('kfs', 'B'), ('kfs', 'I_rho'), ('kfs', 'L_rho'), ('kfs', 'delta_rho'), ('kfs', 'L_R'), ('kfs', 'I_R'), ('kfs', 'delta_R'), ('kfs', 'alpha_R'), ('kfs', 'delta_P'), ('kfs', 'I_K'), ('kfs', 'k_X'), ('kfs', 'k_G'), ('kfs', 'k_C'), ('kfs', 'PIX'), ('kfs', 'Paxtot'), ('kfs', 'm'), ('kfs', 'alpha_PAK'), ('kfs', 'Rho_Square'), ('kfs', 'Rac_Square'), ('kfs', 'Pax_Square'), ('kfs', 'PAKtot'), ('L', 'n'), ('L', 'B'), ('L', 'I_rho'), ('L', 'L_rho'), ('L', 'delta_rho'), ('L', 'L_R'), ('L', 'I_R'), ('L', 'delta_R'), ('L', 'alpha_R'), ('L', 'delta_P'), ('L', 'I_K'), ('L', 'k_X'), ('L', 'k_G'), ('L', 'k_C'), ('L', 'PIX'), ('L', 'Paxtot'), ('L', 'm'), ('L', 'alpha_PAK'), ('L', 'Rho_Square'), ('L', 'Rac_Square'), ('L', 'Pax_Square'), ('L', 'PAKtot'), ('n', 'B'), ('n', 'I_rho'), ('n', 'L_rho'), ('n', 'delta_rho'), ('n', 'L_R'), ('n', 'I_R'), ('n', 'delta_R'), ('n', 'alpha_R'), ('n', 'delta_P'), ('n', 'I_K'), ('n', 'k_X'), ('n', 'k_G'), ('n', 'k_C'), ('n', 'PIX'), ('n', 'Paxtot'), ('n', 'm'), ('n', 'alpha_PAK'), ('n', 'Rho_Square'), ('n', 'Rac_Square'), ('n', 'Pax_Square'), ('n', 'PAKtot'), ('B', 'I_rho'), ('B', 'L_rho'), ('B', 'delta_rho'), ('B', 'L_R'), ('B', 'I_R'), ('B', 'delta_R'), ('B', 'alpha_R'), ('B', 'delta_P'), ('B', 'I_K'), ('B', 'k_X'), ('B', 'k_G'), ('B', 'k_C'), ('B', 'PIX'), ('B', 'Paxtot'), ('B', 'm'), ('B', 'alpha_PAK'), ('B', 'Rho_Square'), ('B', 'Rac_Square'), ('B', 'Pax_Square'), ('B', 'PAKtot'), ('I_rho', 'L_rho'), ('I_rho', 'delta_rho'), ('I_rho', 'L_R'), ('I_rho', 'I_R'), ('I_rho', 'delta_R'), ('I_rho', 'alpha_R'), ('I_rho', 'delta_P'), ('I_rho', 'I_K'), ('I_rho', 'k_X'), ('I_rho', 'k_G'), ('I_rho', 'k_C'), ('I_rho', 'PIX'), ('I_rho', 'Paxtot'), ('I_rho', 'm'), ('I_rho', 'alpha_PAK'), ('I_rho', 'Rho_Square'), ('I_rho', 'Rac_Square'), ('I_rho', 'Pax_Square'), ('I_rho', 'PAKtot'), ('L_rho', 'delta_rho'), ('L_rho', 'L_R'), ('L_rho', 'I_R'), ('L_rho', 'delta_R'), ('L_rho', 'alpha_R'), ('L_rho', 'delta_P'), ('L_rho', 'I_K'), ('L_rho', 'k_X'), ('L_rho', 'k_G'), ('L_rho', 'k_C'), ('L_rho', 'PIX'), ('L_rho', 'Paxtot'), ('L_rho', 'm'), ('L_rho', 'alpha_PAK'), ('L_rho', 'Rho_Square'), ('L_rho', 'Rac_Square'), ('L_rho', 'Pax_Square'), ('L_rho', 'PAKtot'), ('delta_rho', 'L_R'), ('delta_rho', 'I_R'), ('delta_rho', 'delta_R'), ('delta_rho', 'alpha_R'), ('delta_rho', 'delta_P'), ('delta_rho', 'I_K'), ('delta_rho', 'k_X'), ('delta_rho', 'k_G'), ('delta_rho', 'k_C'), ('delta_rho', 'PIX'), ('delta_rho', 'Paxtot'), ('delta_rho', 'm'), ('delta_rho', 'alpha_PAK'), ('delta_rho', 'Rho_Square'), ('delta_rho', 'Rac_Square'), ('delta_rho', 'Pax_Square'), ('delta_rho', 'PAKtot'), ('L_R', 'I_R'), ('L_R', 'delta_R'), ('L_R', 'alpha_R'), ('L_R', 'delta_P'), ('L_R', 'I_K'), ('L_R', 'k_X'), ('L_R', 'k_G'), ('L_R', 'k_C'), ('L_R', 'PIX'), ('L_R', 'Paxtot'), ('L_R', 'm'), ('L_R', 'alpha_PAK'), ('L_R', 'Rho_Square'), ('L_R', 'Rac_Square'), ('L_R', 'Pax_Square'), ('L_R', 'PAKtot'), ('I_R', 'delta_R'), ('I_R', 'alpha_R'), ('I_R', 'delta_P'), ('I_R', 'I_K'), ('I_R', 'k_X'), ('I_R', 'k_G'), ('I_R', 'k_C'), ('I_R', 'PIX'), ('I_R', 'Paxtot'), ('I_R', 'm'), ('I_R', 'alpha_PAK'), ('I_R', 'Rho_Square'), ('I_R', 'Rac_Square'), ('I_R', 'Pax_Square'), ('I_R', 'PAKtot'), ('delta_R', 'alpha_R'), ('delta_R', 'delta_P'), ('delta_R', 'I_K'), ('delta_R', 'k_X'), ('delta_R', 'k_G'), ('delta_R', 'k_C'), ('delta_R', 'PIX'), ('delta_R', 'Paxtot'), ('delta_R', 'm'), ('delta_R', 'alpha_PAK'), ('delta_R', 'Rho_Square'), ('delta_R', 'Rac_Square'), ('delta_R', 'Pax_Square'), ('delta_R', 'PAKtot'), ('alpha_R', 'delta_P'), ('alpha_R', 'I_K'), ('alpha_R', 'k_X'), ('alpha_R', 'k_G'), ('alpha_R', 'k_C'), ('alpha_R', 'PIX'), ('alpha_R', 'Paxtot'), ('alpha_R', 'm'), ('alpha_R', 'alpha_PAK'), ('alpha_R', 'Rho_Square'), ('alpha_R', 'Rac_Square'), ('alpha_R', 'Pax_Square'), ('alpha_R', 'PAKtot'), ('delta_P', 'I_K'), ('delta_P', 'k_X'), ('delta_P', 'k_G'), ('delta_P', 'k_C'), ('delta_P', 'PIX'), ('delta_P', 'Paxtot'), ('delta_P', 'm'), ('delta_P', 'alpha_PAK'), ('delta_P', 'Rho_Square'), ('delta_P', 'Rac_Square'), ('delta_P', 'Pax_Square'), ('delta_P', 'PAKtot'), ('I_K', 'k_X'), ('I_K', 'k_G'), ('I_K', 'k_C'), ('I_K', 'PIX'), ('I_K', 'Paxtot'), ('I_K', 'm'), ('I_K', 'alpha_PAK'), ('I_K', 'Rho_Square'), ('I_K', 'Rac_Square'), ('I_K', 'Pax_Square'), ('I_K', 'PAKtot'), ('k_X', 'k_G'), ('k_X', 'k_C'), ('k_X', 'PIX'), ('k_X', 'Paxtot'), ('k_X', 'm'), ('k_X', 'alpha_PAK'), ('k_X', 'Rho_Square'), ('k_X', 'Rac_Square'), ('k_X', 'Pax_Square'), ('k_X', 'PAKtot'), ('k_G', 'k_C'), ('k_G', 'PIX'), ('k_G', 'Paxtot'), ('k_G', 'm'), ('k_G', 'alpha_PAK'), ('k_G', 'Rho_Square'), ('k_G', 'Rac_Square'), ('k_G', 'Pax_Square'), ('k_G', 'PAKtot'), ('k_C', 'PIX'), ('k_C', 'Paxtot'), ('k_C', 'm'), ('k_C', 'alpha_PAK'), ('k_C', 'Rho_Square'), ('k_C', 'Rac_Square'), ('k_C', 'Pax_Square'), ('k_C', 'PAKtot'), ('PIX', 'Paxtot'), ('PIX', 'm'), ('PIX', 'alpha_PAK'), ('PIX', 'Rho_Square'), ('PIX', 'Rac_Square'), ('PIX', 'Pax_Square'), ('PIX', 'PAKtot'), ('Paxtot', 'm'), ('Paxtot', 'alpha_PAK'), ('Paxtot', 'Rho_Square'), ('Paxtot', 'Rac_Square'), ('Paxtot', 'Pax_Square'), ('Paxtot', 'PAKtot'), ('m', 'alpha_PAK'), ('m', 'Rho_Square'), ('m', 'Rac_Square'), ('m', 'Pax_Square'), ('m', 'PAKtot'), ('alpha_PAK', 'Rho_Square'), ('alpha_PAK', 'Rac_Square'), ('alpha_PAK', 'Pax_Square'), ('alpha_PAK', 'PAKtot'), ('Rho_Square', 'Rac_Square'), ('Rho_Square', 'Pax_Square'), ('Rho_Square', 'PAKtot'), ('Rac_Square', 'Pax_Square'), ('Rac_Square', 'PAKtot'), ('Pax_Square', 'PAKtot')]
+
+used = []
+
+for i in range(len(pars)):
+
+	if i != 15:
+		continue
+
+	print('1 prameter bifurcation in:' + pars[i])
+	#add endpoints to avoid MX in both directions
+	r0 = run(f,ICP=[pars[i]],NMX=bmx[i][0])
+	r0 += run(f, DS='-', ICP=[pars[i]],NMX=bmx[i][1])
+
+	r0 = rl(r0)
+
+	plot(r0, stability=True, top_title='delta_P')
+
+	print('2 parameter bifurcation in all w/:' + pars[i])
+
+	for t in tpars:
+
+		l = list(t)
+		if t in used:
+			continue
+
+		elif pars[i] not in l:
+			continue
+
+		else:
+			used.append(t)
+			l.remove(pars[i])
+			s=l[0]
+
+
+			lp1 = load(r0('LP1'),ISW=2)
+			r1 = run(lp1, ICP=[pars[i],s])
+			r1 += run(lp1, DS='-',ICP=[pars[i],s])
+
+			r1=rl(r1)
+
+			plot(r1, bifurcation_y=s, top_title='LP1 continuation in '+pars[i]+' and '+s, coloring_method= 'branch')
+
+			#r2 = rl(r2)
+			#name = '2parbifin_'+pars[i]+'|x|'+s
+			#save(r2,name)
+
+			lp4 = load(r0('LP4'), ISW=2)
+			r2 = run(lp4, ICP=[pars[i],s])
+			r2 += run(lp4, DS='-',ICP=[pars[i],s])
+
+			r2=rl(r2)
+
+			plot(r2, bifurcation_y=s, top_title='LP4 continuation in '+pars[i]+' and '+s,coloring_method= 'branch')
+

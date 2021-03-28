@@ -1,0 +1,26 @@
+
+
+B = [4.26,10,20,25,30,40,50,100]
+
+par1 = 'delta_P'
+par2 = 'kfs'
+
+NMXf = 170
+NMXr = 170
+
+f = load('chem_Dawn_Kathy')
+
+r0 = r(f,ICP=[par1],NMX=NMXf)+r(f, DS='-', ICP=[par1],NMX=NMXr)
+
+plot(r0, stability=True, bifurcation_y='Rac')
+
+
+for b in B:
+
+	r2 = run(r0('LP1'),ISW=2, ICP=[par1,par2],PAR={8:b})+run(r0('LP1'),ISW=2, DS='-',ICP=[par1,par2],PAR={8:b})+run(r0('LP2'),ISW=2, ICP=[par1,par2],PAR={8:b}) + run(r0('LP2'),ISW=2, DS='-',ICP=[par1,par2],PAR={8:b})+run(r0('LP4'),ISW=2, ICP=[par1,par2],PAR={8:b}) + run(r0('LP3'),ISW=2, DS='-',ICP=[par1,par2],PAR={8:b})+run(r0('LP4'),ISW=2, ICP=[par1,par2],PAR={8:b}) + run(r0('LP4'),ISW=2, DS='-',ICP=[par1,par2],PAR={8:b})
+
+	plot(r2, bifurcation_y=par2, top_title='4 LP continuation in:'+par1+' and '+par2+'with fixed B:'+str(b), coloring_method= 'branch')
+
+	#r2=rl(r2)
+	#save(r0+r2, '2par bifurcation in :'+par1+'and'+par2)
+

@@ -1,0 +1,69 @@
+f = load('chem_Dawn_Kathy')
+
+r0 = run(f,ICP=['delta_P'],NMX=170) + run(f, DS='-', ICP=['delta_P'],NMX=170)
+
+r2f = run(r0('LP1'),ISW=2, ICP=['delta_P','kfs'])+run(r0('LP2'),ISW=2, ICP=['delta_P','kfs'])+run(r0('LP3'),ISW=2, ICP=['delta_P','kfs'])+run(r0('LP4'),ISW=2, ICP=['delta_P','kfs'])
+
+#plot(r2f,bifurcation_y='kfs',top_title='forward LPs in r2')
+#wait()
+
+
+r2r = run(r0('LP1'),ISW=2, DS='-',ICP=['delta_P','kfs'])+run(r0('LP2'),ISW=2, DS='-',ICP=['delta_P','kfs'])+run(r0('LP3'),ISW=2, DS='-',ICP=['delta_P','kfs'])+run(r0('LP4'),ISW=2, DS='-',ICP=['delta_P','kfs'])
+
+#plot(r2r,bifurcation_y='kfs',top_title='bakcward LPs in r2')
+#wait()
+
+
+#r2 = \
+#run(r0('LP1'),ISW=2, ICP=['delta_P','kfs'],UZSTOP={'delta_P':0,'kfs':0})+\
+#run(r0('LP1'),ISW=2, DS='-',ICP=['delta_P','kfs'],UZSTOP={'delta_P':0.1,'kfs':3})+\
+#run(r0('LP2'),ISW=2, ICP=['delta_P','kfs'],UZSTOP={'delta_P':0,'kfs':0})+\
+#run(r0('LP2'),ISW=2, DS='-',ICP=['delta_P','kfs'],UZSTOP={'delta_P':0.1,'kfs':3})+\
+#run(r0('LP3'),ISW=2, ICP=['delta_P','kfs'],UZSTOP={'delta_P':0.1,'kfs':0})+\
+#run(r0('LP3'),ISW=2, DS='-',ICP=['delta_P','kfs'],UZSTOP={'delta_P':-0.7,'kfs':3})+\
+#run(r0('LP4'),ISW=2, ICP=['delta_P','kfs'],UZSTOP={'delta_P':0.2,'kfs':0})+\
+#run(r0('LP4'),ISW=2, DS='-',ICP=['delta_P','kfs'],UZSTOP={'delta_P':-0.7,'kfs':3})
+
+epf = r2f
+epr = r2r
+
+#print(epr)
+#print(epf)
+#wait()
+
+i = 0
+n = 7
+
+while i < n:
+
+	endpointf = epf('EP')
+	epf = []
+	for endf in endpointf:
+		epf += run(endf,ISW=2, ICP=['delta_P','kfs'])
+	r2f += epf
+
+
+	#plot(epf,bifurcation_y='kfs',top_title='forward EPs'+str(i))
+	#wait()
+
+
+	endpointr = epr('EP')
+	epr = []
+	for endr in endpointr:
+		epr += run(endr,ISW=2, ICP=['delta_P','kfs']) #literally fkn magic WHY NO DS='-'??????????????
+	r2r += epr
+
+
+	#plot(epr+epf,bifurcation_y='kfs',top_title='combo EPs'+str(i))
+	#wait()
+
+	i+=1
+
+plot(r2r+r2f+r0, bifurcation_y='Rac', top_title='all eps continued'+str(i)+'times')
+
+	#wait()
+
+	
+
+
+

@@ -1,0 +1,20 @@
+f = load('chem_Dawn_Kathy')
+
+r0 = run(f, ICP=['delta_P'], NMX=170)
+r0 += run(f, DS='-', ICP=['delta_P'], NMX=145)
+
+plot(r0, stability=True)
+
+lp1 = load(r0('LP1'), ISW=2)
+
+r1 = run(lp1, ICP=['delta_P','kfs'])
+r1 += run(lp1, DS='-',ICP=['delta_P','kfs'])
+
+plot(r1, bifurcation_y='kfs')
+
+lp4 = load(r0('LP4'), ISW=2)
+
+r2 = run(lp4, ICP=['delta_P','kfs'])
+r2 += run(lp4, DS='-',ICP=['delta_P','kfs'])
+
+plot(r2, bifurcation_y='kfs')

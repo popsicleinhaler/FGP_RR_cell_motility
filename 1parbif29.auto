@@ -1,0 +1,40 @@
+f = load('chem_Dawn_Kathy')
+pars = ['kon1','koff1','kon2','koff2','kfs','L','n','B','I_rho','L_rho','delta_rho','L_R','I_R','delta_R','alpha_R','delta_P','I_K','k_X','k_G','k_C','PIX','Paxtot','m','alpha_PAK','Rho_Square','Rac_Square','Pax_Square','PAKtot']
+#        4lp    none     2lp    none  none  4LP na  na    2LPs   2 rev    2rev       2lps  2rev   2lps      3lps     4lps      2rev  2rev 2rev  2rev   2rev   2rev   none   2rev        2rev           2lps       2lps       nothing -> ran longer: 4lps
+
+#       'kon1'    'koff1'   'kon2'  'koff2'  'kfs'      'L'     'n'    'B'   'I_rho' 'L_rho' 'delta_rho' 'L_R'    'I_R' 'delta_R','alpha_R','delta_P',  'I_K',    'k_X',   'k_G'   'k_C'   'PIX'   'Paxtot'  'm'  'alp_PAK''Rh_Sq'  'Ra_Sq'  'Pax_Sq'  'PAKtot'
+bmx = [[1759,200],[9,700],[393,700],[9,1310],[9,4629],[300,1000],[1,1],[9,220],[40,60],[9,110],  [9,47],  [60,105],[9,60],[30,1]    ,[9,800], [170,145],  [9,2206],[9,1504],[9,2343],[9,490],[9,153], [9,115], [1,1], [9,65],[9,124],[60,1783],[140,134], [8400,1]]
+ 
+
+for i in range(len(pars)):
+	#if pars[i] != 'delta_P':
+	#	continue
+	#if pars[i] == 'PAKtot':
+	#	print('1 prameter bifurcation in:' + pars[i])
+	#	#	add endpoints to avoid MX in both directions
+	#	r0 = run(f,ICP=[pars[i]],UZSTOP={pars[i]:5900})
+	#	r0 += run(f, DS='-', ICP=[pars[i]],NMX=bmx[i][1])
+	#	name = 'bifin_'+pars[i]
+	#
+	#	p = plot(r0, stability=True, bifurcation_y='Rac')
+	#	#p.savefig(name+'.png')
+	#	continue
+
+	print('1 prameter bifurcation in:' + pars[i])
+
+	#add endpoints to avoid MX in both directions
+	#r0 = run(f,ICP=[pars[i]],UZSTOP={pars[i]:50}, SP=['BP0'])
+	#r0 += run(f, DS='-', ICP=[pars[i]],UZSTOP={pars[i]:0},SP=['BP0'])
+	
+	r0 = run(f,ICP=[pars[i]],NMX=2000, SP=['BP0'])
+	r0 += run(f, DS='-', ICP=[pars[i]],NMX=2000,SP=['BP0'])
+
+	#r0 = rl(r0)
+	name = 'bif_in_'+pars[i]
+	#save(r0,name)
+
+	p = plot(r0, stability=True, bifurcation_y='Rac', top_title='Bifurcation wrt model parameter: '+pars[i],grid=False)
+	#p.savefig(name+'.png')
+	wait()
+
+

@@ -1,0 +1,1780 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     70321,       1772]
+NotebookOptionsPosition[     68739,       1738]
+NotebookOutlinePosition[     69174,       1755]
+CellTagsIndexPosition[     69131,       1752]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"R1", "=", 
+   RowBox[{
+    RowBox[{"k1", "*", "RhD", "*", "RhE"}], "-", 
+    RowBox[{"k2", "*", "RhDRhE"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R2", "=", 
+   RowBox[{"k3", "*", "RhDRhE"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R3", "=", 
+   RowBox[{
+    RowBox[{"k4", "*", "RhT", "*", "RhA"}], "-", 
+    RowBox[{"k5", "*", "RhTRhA"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R4", "=", 
+   RowBox[{"k6", "*", "RhTRhA"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R5", "=", 
+   RowBox[{
+    RowBox[{"k7", "*", "RaT", "*", "RaA"}], "-", 
+    RowBox[{"k8", "*", "RaTRaA"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R6", "=", 
+   RowBox[{"k9", "*", "RaTRaA"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R7", "=", 
+   RowBox[{
+    RowBox[{"k10", "*", "RaD", "*", "RaE"}], "-", 
+    RowBox[{"k11", "*", "RaDRaE"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R8", "=", 
+   RowBox[{"k12", "*", "RaDRaE"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R9", "=", 
+   RowBox[{
+    RowBox[{"k13", "*", "RaD", "*", "nRaE"}], "-", 
+    RowBox[{"k14", "*", "RaDnRaE"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R10", "=", 
+   RowBox[{"k15", "*", "RaDnRaE"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R11", "=", 
+   RowBox[{
+    RowBox[{"k16", "*", "RaD", "*", "PIX"}], "-", 
+    RowBox[{"k17", "*", "RaDPIX"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R12", "=", 
+   RowBox[{"k18", "*", "RaDPIX"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R13", "=", 
+   RowBox[{
+    RowBox[{"k19", "*", "RaD", "*", "PAKPIX"}], "-", 
+    RowBox[{"k20", "*", "RaDPAKPIX"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R14", "=", 
+   RowBox[{"k21", "*", "RaDPAKPIX"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R15", "=", 
+   RowBox[{
+    RowBox[{"k22", "*", "RaD", "*", "PG"}], "-", 
+    RowBox[{"k23", "*", "RaDPG"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R16", "=", 
+   RowBox[{"k24F", "*", "RaDPG"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R17", "=", 
+   RowBox[{
+    RowBox[{"k25", "*", "RaD", "*", "PGP"}], "-", 
+    RowBox[{"k26", "*", "RaDPGP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R18", "=", 
+   RowBox[{"k27", "*", "RaDPGP"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R19", "=", 
+   RowBox[{
+    RowBox[{"k28", "*", "RaD", "*", "PPG"}], "-", 
+    RowBox[{"k29", "*", "RaDPPG"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R20", "=", 
+   RowBox[{"k30", "*", "RaDPPG"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R21", "=", 
+   RowBox[{
+    RowBox[{"k31", "*", "RaD", "*", "PPGP"}], "-", 
+    RowBox[{"k32", "*", "RaDPPGP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R22", "=", 
+   RowBox[{"k33", "*", "RaDPPGP"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R23", "=", 
+   RowBox[{
+    RowBox[{"k34", "*", "RaD", "*", "PPGPPxP"}], "-", 
+    RowBox[{"k35", "*", "RaDPPGPPxP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R24", "=", 
+   RowBox[{"k36", "*", "RaDPPGPPxP"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R25", "=", 
+   RowBox[{
+    RowBox[{"k37", "*", "RaT", "*", "PAK"}], "-", 
+    RowBox[{"k38", "*", "RaTPAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R26", "=", 
+   RowBox[{
+    RowBox[{"k39", "*", "Px", "*", "RaTPAK"}], "-", 
+    RowBox[{"k40", "*", "PxRaTPAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R27", "=", 
+   RowBox[{"k41", "*", "PxRaTPAK"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R28", "=", 
+   RowBox[{
+    RowBox[{"k42", "*", "Px", "*", "FAK"}], "-", 
+    RowBox[{"k43", "*", "PxFAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R29", "=", 
+   RowBox[{"k44", "*", "PxFAK"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R30", "=", 
+   RowBox[{
+    RowBox[{"k45", "*", "PxP", "*", "PP2A"}], "-", 
+    RowBox[{"k46", "*", "PxPPP2A"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R31", "=", 
+   RowBox[{"k47", "*", "PxPPP2A"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R32", "=", 
+   RowBox[{
+    RowBox[{"k48", "*", "PxTP", "*", "PEST"}], "-", 
+    RowBox[{"k49", "*", "PxTPPEST"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R33", "=", 
+   RowBox[{"k50", "*", "PxTPPEST"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R34", "=", 
+   RowBox[{
+    RowBox[{"k53", "*", "PxP", "*", "FAK"}], "-", 
+    RowBox[{"k54", "*", "PxPFAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R35", "=", 
+   RowBox[{
+    RowBox[{"k55", "*", "PxTP", "*", "FAK"}], "-", 
+    RowBox[{"k56", "*", "PxTPFAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R36", "=", 
+   RowBox[{
+    RowBox[{"k57", "*", "GIT", "*", "FAK"}], "-", 
+    RowBox[{"k58", "*", "GITFAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R37", "=", 
+   RowBox[{"k59", "*", "GITFAK"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R38", "=", 
+   RowBox[{
+    RowBox[{"k60", "*", "GITP", "*", "PEST"}], "-", 
+    RowBox[{"k61", "*", "GITPPEST"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R39", "=", 
+   RowBox[{"k62", "*", "GITPPEST"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R40", "=", 
+   RowBox[{
+    RowBox[{"k63", "*", "PG", "*", "FAK"}], "-", 
+    RowBox[{"k64", "*", "PGFAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R41", "=", 
+   RowBox[{"k65", "*", "PGFAK"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R42", "=", 
+   RowBox[{
+    RowBox[{"k66", "*", "PGP", "*", "PEST"}], "-", 
+    RowBox[{"k67", "*", "PGPPEST"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R43", "=", 
+   RowBox[{"k68", "*", "PGPPEST"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R44", "=", 
+   RowBox[{
+    RowBox[{"k69", "*", "PPG", "*", "FAK"}], "-", 
+    RowBox[{"k70", "*", "PPGFAK"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R45", "=", 
+   RowBox[{"k71", "*", "PPGFAK"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R46", "=", 
+   RowBox[{
+    RowBox[{"k72", "*", "PPGP", "*", "PEST"}], "-", 
+    RowBox[{"k73", "*", "PPGPPEST"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R47", "=", 
+   RowBox[{"k74", "*", "PPGPPEST"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R48", "=", 
+   RowBox[{
+    RowBox[{"k75", "*", "PAK", "*", "PIX"}], "-", 
+    RowBox[{"k76", "*", "PAKPIX"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R49", "=", 
+   RowBox[{
+    RowBox[{"k77", "*", "PIX", "*", "GIT"}], "-", 
+    RowBox[{"k78", "*", "PG"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R50", "=", 
+   RowBox[{
+    RowBox[{"k79", "*", "PIX", "*", "GITP"}], "-", 
+    RowBox[{"k80", "*", "PGP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R51", "=", 
+   RowBox[{
+    RowBox[{"k81", "*", "PAK", "*", "PG"}], "-", 
+    RowBox[{"k82", "*", "PPG"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R52", "=", 
+   RowBox[{
+    RowBox[{"k83", "*", "PAK", "*", "PGP"}], "-", 
+    RowBox[{"k84", "*", "PPGP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R53", "=", 
+   RowBox[{
+    RowBox[{"k85", "*", "PAKPIX", "*", "GIT"}], "-", 
+    RowBox[{"k86", "*", "PPG"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R54", "=", 
+   RowBox[{
+    RowBox[{"k87", "*", "PAKPIX", "*", "GITP"}], "-", 
+    RowBox[{"k88", "*", "PPGP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R55", "=", 
+   RowBox[{
+    RowBox[{"k89", "*", "PPGP", "*", "PxP"}], "-", 
+    RowBox[{"k90", "*", "PPGPPxP"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R56", "=", 
+   RowBox[{
+    RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], "-", 
+    RowBox[{"k92", "*", "Quart"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R57", "=", 
+   RowBox[{
+    RowBox[{"k93", "*", "Px", "*", "Quart"}], "-", 
+    RowBox[{"k94", "*", "PxQuart"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R58", "=", 
+   RowBox[{"k95", "*", "PxQuart"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R59", "=", 
+   RowBox[{
+    RowBox[{"k96", "*", "PxTP", "*", "Crk"}], "-", 
+    RowBox[{"k97", "*", "PxTPCrk"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"R60", "=", 
+   RowBox[{
+    RowBox[{"k98", "*", "PxTPCrk", "*", "xnRaE"}], "-", 
+    RowBox[{"k99", "*", "PxTPCrkxnRaE"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"R61", "=", 
+    RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}], ";"}], "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaTdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", " ", "k7"}], "*", "RaT", "*", "RaA"}], " ", "+", " ", 
+    RowBox[{"k8", "*", "RaTRaA"}], " ", "+", " ", 
+    RowBox[{"k12", "*", "RaDRaE"}], " ", "+", " ", 
+    RowBox[{"k15", "*", "RaDnRaE"}], " ", "+", " ", 
+    RowBox[{"k18", "*", "RaDPIX"}], "+", " ", 
+    RowBox[{"k21", "*", "RaDPAKPIX"}], "+", " ", 
+    RowBox[{"k24", "*", "RaDPG"}], "+", " ", 
+    RowBox[{"k27", "*", "RaDPGP"}], "+", " ", 
+    RowBox[{"k30", "*", "RaDPPG"}], "+", " ", 
+    RowBox[{"k33", "*", "RaDPPGP"}], " ", "+", " ", 
+    RowBox[{"k36", "*", "RaDPPGPPxP"}], " ", "-", " ", 
+    RowBox[{"k37", "*", "RaT", "*", "PAK"}], " ", "+", " ", 
+    RowBox[{"k38", "*", "RaTPAK"}], " ", "-", " ", 
+    RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], " ", "+", " ", 
+    RowBox[{"k92", "*", "Quart"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaDdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", " ", "k9"}], "*", "RaTRaA"}], " ", "-", " ", 
+    RowBox[{"k10", "*", "RaD", "*", "RaE"}], " ", "-", " ", 
+    RowBox[{"k13", "*", "RaD", "*", "nRaE"}], " ", "+", 
+    RowBox[{"k14", "*", "RaDnRaE"}], "-", 
+    RowBox[{"k16", "*", "RaD", "*", "PIX"}], " ", "+", " ", 
+    RowBox[{"k17", "*", "RaDPIX"}], " ", "-", 
+    RowBox[{"k19", "*", "RaD", "*", "PAKPIX"}], " ", "+", " ", 
+    RowBox[{"k20", "*", "RaDPAKPIX"}], "-", 
+    RowBox[{"k22", "*", "RaD", "*", "PG"}], " ", "+", " ", 
+    RowBox[{"k23", "*", "RaDPG"}], " ", "-", 
+    RowBox[{"k25", "*", "RaD", "*", "PGP"}], " ", "+", " ", 
+    RowBox[{"k26", "*", "RaDPGP"}], " ", "-", " ", 
+    RowBox[{"k28", "*", "RaD", "*", "PPG"}], "+", 
+    RowBox[{"k29", "*", "RaDPPG"}], " ", "-", " ", 
+    RowBox[{"k31", "*", "RaD", "*", "PPGP"}], " ", "+", " ", 
+    RowBox[{"k32", "*", "RaDPPGP"}], "-", 
+    RowBox[{"k34", "*", "RaD", "*", "PPGPPxP"}], "+", 
+    RowBox[{"k35", "*", "RaDPPGPPxP"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRhTdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "k3"}], "*", "RhDRhE"}], "-", 
+    RowBox[{"k4", "*", "RhT", "*", "RhA"}], "+", 
+    RowBox[{"k5", "*", "RhTRhA"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRhDdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k1"}], "*", "RhD", "*", "RhE"}], "+", 
+    RowBox[{"k2", "*", "RhDRhE"}], "+", 
+    RowBox[{"k6", "*", "RhTRhA"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPxdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k39"}], "*", "Px", "*", "RaTPAK"}], "+", 
+    RowBox[{"k40", "*", "PxRaTPAK"}], "-", 
+    RowBox[{"k42", "*", "Px", "*", "FAK"}], "+", 
+    RowBox[{"k43", "*", "PxFAK"}], "+", 
+    RowBox[{"k47", "*", "PxPPP2A"}], "+", 
+    RowBox[{"k50", "*", "PxTPPEST"}], "-", 
+    RowBox[{"k51", "*", "Px", "*", "FAK"}], "+", 
+    RowBox[{"k52", "*", "PxFAK"}], "-", 
+    RowBox[{"k93", "*", "Px", "*", "Quart"}], "+", 
+    RowBox[{"k94", "*", "PxQuart"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPxPdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "k41"}], "*", "PxRaTPAK"}], "-", 
+    RowBox[{"k45", "*", "PxP", "*", "PP2A"}], "+", 
+    RowBox[{"k46", "*", "PxPPP2A"}], "-", 
+    RowBox[{"k53", "*", "PxP", "*", "FAK"}], "+", 
+    RowBox[{"k54", "*", "PxPFAK"}], "-", 
+    RowBox[{"k89", "*", "PxP", "*", "PPGP"}], "+", 
+    RowBox[{"k90", "*", "PPGPPxP"}], "+", 
+    RowBox[{"k95", "*", "PxQuart"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPxTPdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k44", "*", "PxFAK"}], " ", "-", " ", 
+     RowBox[{"k48", "*", "PxTP", "*", "PEST"}], "+", 
+     RowBox[{"k49", "*", "PxTPPEST"}], "-", 
+     RowBox[{"k55", "*", "PxTP", "*", "FAK"}], "-", 
+     RowBox[{"k56", "*", "PxTPFAK"}], "-", 
+     RowBox[{"k96", "*", "PxTP", "*", "Crk"}], "+", 
+     RowBox[{"k97", "*", "PxTPCrk"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaAdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k7"}], "*", "RaA", "*", "RaT"}], "+", 
+    RowBox[{"k8", "*", "RaTRaA"}], "+", 
+    RowBox[{"k9", "*", "RaTRaA"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaTRaAdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "k7"}], "*", "RaT", "*", "RaA"}], "-", 
+    RowBox[{"k8", "*", "RaTRaA"}], "-", 
+    RowBox[{"k9", "*", "RaTRaA"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRhAdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k4"}], "*", "RhA", "*", "RhT"}], "+", 
+    RowBox[{"k5", "*", "RhTRhA"}], "+", 
+    RowBox[{"k6", "*", "RhTRhA"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRhTRhAdt", " ", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"+", "k4"}], "*", "RhT", "*", "RhA"}], "-", 
+     RowBox[{"k5", "*", "RhTRhA"}], "-", 
+     RowBox[{"k6", "*", "RhTRhA"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPAKdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k37"}], "*", "RaT", "*", "PAK"}], "+", 
+    RowBox[{"k38", "*", "RaTPAK"}], "-", 
+    RowBox[{"k75", "*", "PAK", "*", "PIX"}], "+", 
+    RowBox[{"k76", "*", "PAKPIX"}], "-", 
+    RowBox[{"k81", "*", "PAK", "*", "PG"}], "+", 
+    RowBox[{"k82", "*", "PPG"}], "-", 
+    RowBox[{"k83", "*", "PAK", "*", "PGP"}], "+", 
+    RowBox[{"k84", "*", "PPGP"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaTPAKdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k37", "*", "RaT", "*", "PAK"}], "-", 
+    RowBox[{"k38", "*", "RaTPAK"}], "-", 
+    RowBox[{"k39", "*", "Px", "*", "RaTPAK"}], "+", 
+    RowBox[{"k40", "*", "PxRaTPAK"}], "+", 
+    RowBox[{"k41", "*", "PxRaTPAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPxRaTPAKdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k39", "*", "Px", "*", "RaTPAK"}], "-", 
+     RowBox[{"k40", "*", "PxRaTPAK"}], "-", 
+     RowBox[{"k41", "*", "PxRaTPAK"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPIXdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k16"}], "*", "RaD", "*", "PIX"}], "+", 
+    RowBox[{"k17", "*", "RaDPIX"}], " ", "+", " ", 
+    RowBox[{"k18", "*", "RadPIX"}], "-", 
+    RowBox[{"k75", "*", "PAK", "*", "PIX"}], "+", 
+    RowBox[{"k76", "*", "PAKPIX"}], "-", 
+    RowBox[{"k77", "*", "PIX", "*", "GIT"}], "+", 
+    RowBox[{"k78", "*", "PG"}], "-", 
+    RowBox[{"k79", "*", "PIX", "*", "GITP"}], "+", 
+    RowBox[{"k80", "*", "PGP"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dGITdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k57"}], "*", "GIT", "*", "FAK"}], "+", 
+    RowBox[{"k58", "*", "GITFAK"}], "+", 
+    RowBox[{"k62", "*", "GITPPEST"}], "-", 
+    RowBox[{"k77", "*", "GIT", "*", "PIX"}], "+", 
+    RowBox[{"k78", "*", "PG"}], "-", 
+    RowBox[{"k85", "*", "GIT", "*", "PAKPIX"}], "+", 
+    RowBox[{"k86", "*", "PPG"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dGITPdt", " ", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"+", "k59"}], "*", "GITFAK"}], "-", 
+     RowBox[{"k60", "*", "GITP", "*", "PEST"}], "-", 
+     RowBox[{"k79", "*", "PIX", "*", "GITP"}], "+", 
+     RowBox[{"k80", "*", "PGP"}], "-", 
+     RowBox[{"k87", "*", "GITP", "*", "PAKPIX"}], "+", 
+     RowBox[{"k88", "*", "PPGP"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dFAKdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k42"}], "*", "FAK", "*", "Px"}], "+", 
+    RowBox[{"k43", "*", "PxFAK"}], "+", 
+    RowBox[{"k44", "*", "PxFAK"}], "-", 
+    RowBox[{"k53", "*", "FAK", "*", "PxP"}], "+", 
+    RowBox[{"k54", "*", "PxPFAK"}], "-", 
+    RowBox[{"k55", "*", "FAK", "*", "PxTP"}], "+", 
+    RowBox[{"k56", "*", "PxTPFAK"}], "-", 
+    RowBox[{"k57", "*", "GIT", "*", "FAK"}], "+", 
+    RowBox[{"k59", "*", "GITFAK"}], "-", 
+    RowBox[{"k63", "*", "FAK", "*", "PG"}], "+", 
+    RowBox[{"k64", "*", "PGFAK"}], "+", 
+    RowBox[{"k65", "*", "PGFAK"}], " ", "-", " ", 
+    RowBox[{"k69", "*", "FAK", "*", "PPG"}], "+", 
+    RowBox[{"K70", "*", "PPGFAK"}], "+", 
+    RowBox[{"k71", "*", "PPGFAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPxFAKdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k42", "*", "Px", "*", "FAK"}], "-", 
+    RowBox[{"k43", "*", "PxFAK"}], "-", 
+    RowBox[{"k44", "*", "PxFAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dGITFAKdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k57", "*", "GIT", "*", "FAK"}], "-", 
+    RowBox[{"k58", "*", "GITFAK"}], "-", 
+    RowBox[{"k59", "*", "GITFAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPGFAKdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"k63", "*", "FAK", "*", "PG"}], "-", 
+    RowBox[{"k64", "*", "PGFAK"}], "-", 
+    RowBox[{"k65", "*", "PGFAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPPGFAKdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k69", "*", "FAK", "*", "PPG"}], "-", 
+    RowBox[{"k70", "*", "PPGFAK"}], "-", 
+    RowBox[{"k71", "*", "PPGFAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPxTPFAKdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k55", "*", "FAK", "*", "PxTP"}], "-", 
+    RowBox[{"k56", "*", "PxTPFAK"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPxPFAKdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k53", "*", "PxP", "*", "FAK"}], "-", 
+     RowBox[{"k54", "*", "PxPFAK"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPESTdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k48"}], "*", "PEST", "*", "PxTP"}], "+", 
+    RowBox[{"k49", "*", "PxTPPEST"}], "+", 
+    RowBox[{"k50", "*", "PxTPPEST"}], "-", 
+    RowBox[{"k60", "*", "PEST", "*", "GITP"}], "+", 
+    RowBox[{"k61", "*", "GITPPEST"}], "+", 
+    RowBox[{"k62", "*", "GITPPEST"}], "-", 
+    RowBox[{"k66", "*", "PEST", "*", "PGP"}], "+", 
+    RowBox[{"k67", "*", "PGPPEST"}], "+", 
+    RowBox[{"k68", "*", "PGPPEST"}], "-", 
+    RowBox[{"k72", "*", "PEST", "*", "PPGP"}], "+", 
+    RowBox[{"k73", "*", "PPGPPEST"}], "+", 
+    RowBox[{"k74", "*", "PPGPPEST"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dGITPPESTdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k60", "*", "PEST", "*", "GITP"}], "-", 
+    RowBox[{"k61", "*", "GITPPEST"}], "-", 
+    RowBox[{"k62", "*", "GITPPEST"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPGPPESTdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k66", "*", "PEST", "*", "PGP"}], "-", 
+     RowBox[{"k67", "*", "PGPPEST"}], "-", 
+     RowBox[{"k68", "*", "PGPPEST"}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPPGPPESTdt", "=", " ", 
+    RowBox[{
+     RowBox[{"k72", "*", "PEST", "*", "PPGP"}], "-", 
+     RowBox[{"k73", "*", "PPGPPEST"}], "-", 
+     RowBox[{"k74", "*", "PPGPPEST"}]}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPxTPPESTdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k48", "*", "PEST", "*", "PxTP"}], "-", 
+     RowBox[{"k49", "*", "PxTPPEST"}], "-", 
+     RowBox[{"k50", "*", "PxTPPEST"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dCrkdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k96"}], "*", "Crk", "*", "PxTP"}], "-", 
+    RowBox[{"k97", "*", "PxTPCrk"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPxTPCrkdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k96", "*", "Crk", "*", "PxTP"}], "-", 
+    RowBox[{"k97", "*", "PxTPCrk"}], "-", 
+    RowBox[{"k98", "*", "PxTPCrk", "*", "xnRaE"}], "+", 
+    RowBox[{"k99", "*", "PxTPCrkxnRaE"}], "+", 
+    RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dPxTPCrkxnRaEdt", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"k98", "*", "PxTPCrk", "*", "xnRaE"}], "-", 
+     RowBox[{"k99", "*", "PxTPCrkxnRaE"}], "-", 
+     RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaEdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k10"}], "*", "RaE", "*", "RaD"}], "+", 
+    RowBox[{"k11", "*", "RaDRaE"}], "+", 
+    RowBox[{"k12", "*", "RaDRaE"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dnRaEdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k13"}], "*", "RaD", "*", "nRaE"}], "+", 
+    RowBox[{"k14", "*", "RaDnRaE"}], "+", 
+    RowBox[{"k15", "*", "RaDnRaE"}], "+", 
+    RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dxnRaEdt", " ", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "k98"}], "*", "xnRaE", "*", "PxTPCrk"}], "+", 
+     RowBox[{"k99", "*", "PxTPCrkxnRaE"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaDRaEdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k10", "*", "RaE", "*", "RaD"}], "-", 
+    RowBox[{"k11", "*", "RaDRaE"}], "-", 
+    RowBox[{"k12", "*", "RaDRaE"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaDPIXdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"k16", "*", "PIX", "*", "RaD"}], "-", 
+    RowBox[{"k17", "*", "RaDPIX"}], " ", "-", " ", 
+    RowBox[{"k18", "*", "RaDPIX"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaDnRaEdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k13", "*", "nRaE", "*", "RaD"}], "-", 
+    RowBox[{"k14", "*", "RaDnRaE"}], " ", "-", " ", 
+    RowBox[{"k15", "*", "RaDnRaE"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRaDPAKPIXdt", "=", " ", 
+   RowBox[{
+    RowBox[{"k19", "*", "PAKPIX", "*", "RaD"}], "-", 
+    RowBox[{"k20", "*", "RaDPAKPIX"}], " ", "-", " ", 
+    RowBox[{"k21", "*", "RaDPAKPIX"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRaDPGdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k22", "*", "PG", "*", "RaD"}], "-", 
+     RowBox[{"k23", "*", "RaDPG"}], " ", "-", " ", 
+     RowBox[{"k24", "*", "RaDPG"}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRaDPGPdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k25", "*", "PGP", "*", "RaD"}], "-", 
+     RowBox[{"k26", "*", "RaDPGP"}], " ", "-", " ", 
+     RowBox[{"k27", "*", "RaDPGP"}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRaDPPGdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k28", "*", "PPG", "*", "RaD"}], "-", 
+     RowBox[{"k29", "*", "RaDPPG"}], " ", "-", " ", 
+     RowBox[{"k30", "*", "RaDPPG"}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRaDPPGPdt", " ", "=", 
+    RowBox[{
+     RowBox[{"k31", "*", "PPGP", "*", "RaD"}], "-", 
+     RowBox[{"k32", "*", "RaDPPGP"}], "-", " ", 
+     RowBox[{"k33", "*", "RaDPPGP"}]}]}], ";"}], " ", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPAKPIXdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k19"}], "*", "PAKPIX", "*", "RaD"}], "+", 
+    RowBox[{"k20", "*", "RaDPAKPIX"}], "+", 
+    RowBox[{"k21", "*", "RaDPAKPIX"}], " ", "+", " ", 
+    RowBox[{"k75", "*", "PAK", "*", "PIX"}], "-", 
+    RowBox[{"k76", "*", "PAKPIX"}], "-", 
+    RowBox[{"k85", "*", "PAKPIX", "*", "GIT"}], " ", "+", " ", 
+    RowBox[{"k86", "*", "PPG"}], "-", 
+    RowBox[{"k87", "*", "PAKPIX", "*", "GITP"}], "+", 
+    RowBox[{"k88", "*", "PPGP"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPGdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k22"}], "*", "PG", "*", "RaD"}], "+", 
+    RowBox[{"k23", "*", "RaDPG"}], "+", 
+    RowBox[{"k24", "*", "RaDPG"}], "-", 
+    RowBox[{"k63", "*", "PG", "*", "FAK"}], "+", 
+    RowBox[{"k64", "*", "PGFAK"}], "+", 
+    RowBox[{"k68", "*", "PGPPEST"}], "+", 
+    RowBox[{"k77", "*", "PIX", "*", "GIT"}], "-", 
+    RowBox[{"k78", "*", "PG"}], "-", 
+    RowBox[{"k81", "*", "PG", "*", "PAK"}], "+", 
+    RowBox[{"k82", "*", "PPG"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPGPdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"k25", "*", "PGP", "*", "RaD"}], "-", 
+    RowBox[{"k26", "*", "RaDPGP"}], "+", 
+    RowBox[{"k27", "*", "RaDPGP"}], "+", 
+    RowBox[{"k65", "*", "PGFAK"}], "-", 
+    RowBox[{"k66", "*", "PEST", "*", "PGP"}], "+", 
+    RowBox[{"k67", "*", "PGPPEST"}], "+", 
+    RowBox[{"k79", "*", "PIX", "*", "GITP"}], "-", 
+    RowBox[{"k80", "*", "PGP"}], "-", 
+    RowBox[{"k83", "*", "PAK", "*", "PGP"}], "+", 
+    RowBox[{"k84", "*", "PPGP"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPPGdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k28"}], "*", "PPG", "*", "RaD"}], "+", 
+    RowBox[{"k29", "*", "RaDPPG"}], "+", 
+    RowBox[{"k30", "*", "RaDPPG"}], "-", 
+    RowBox[{"k69", "*", "PPG", "*", "FAK"}], "+", 
+    RowBox[{"k70", "*", "PPGFAK"}], "+", 
+    RowBox[{"k74", "*", "PPGPPEST"}], "+", 
+    RowBox[{"k81", "*", "PG", "*", "PAK"}], "-", 
+    RowBox[{"k82", "*", "PPG"}], "+", 
+    RowBox[{"k85", "*", "GIT", "*", "PAKPIX"}], "-", 
+    RowBox[{"k86", "*", "PPG"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPPGPdt", " ", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k31"}], "*", "PPGP", "*", "RaD"}], " ", "+", 
+    RowBox[{"k32", "*", "RaDPPGP"}], "+", 
+    RowBox[{"k33", "*", "RaDPPGP"}], "+", 
+    RowBox[{"k71", "*", "PPGFAK"}], "-", 
+    RowBox[{"k72", "*", "PPGP", "*", "PEST"}], "+", 
+    RowBox[{"k73", "*", "PPGPPEST"}], "+", 
+    RowBox[{"k83", "*", "PAK", "*", "PGP"}], "-", 
+    RowBox[{"k84", "*", "PPGP"}], "+", 
+    RowBox[{"k87", "*", "GITP", "*", "PAKPIX"}], "-", 
+    RowBox[{"k88", "*", "PPGP"}], "-", 
+    RowBox[{"k89", "*", "PPGP", "*", "PxP"}], "+", 
+    RowBox[{"k90", "*", "PPGPPxP"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPPGPPxPdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k34"}], "*", "RaD", "*", "PPGPxP"}], "+", 
+    RowBox[{"k35", "*", "RaDPPGPPxP"}], "+", 
+    RowBox[{"k36", "*", "RaDPPGPxP"}], "+", 
+    RowBox[{"k89", "*", "PPGP", "*", "PxP"}], "-", 
+    RowBox[{"k90", "*", "PPGPPxP"}], "-", 
+    RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], "-", 
+    RowBox[{"k92", "*", "Quart"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dQuartdt", " ", "=", 
+   RowBox[{
+    RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], "-", 
+    RowBox[{"k92", "*", "Quart"}], "-", 
+    RowBox[{"k93", "*", "Px", "*", "Quart"}], "+", 
+    RowBox[{"k94", "*", "PxQuart"}], "+", 
+    RowBox[{"k95", "*", "PxQuart"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dPxQuartdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "k93"}], "*", "Px", "*", "Quart"}], " ", "-", " ", 
+    RowBox[{"k94", "*", "PxQuart"}], "-", 
+    RowBox[{"k95", "*", "PxQuart"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRaDPPGPPxPdt", "=", " ", 
+    RowBox[{
+     RowBox[{"k34", "*", "RaD", "*", "PPGPPxP"}], " ", "-", " ", 
+     RowBox[{"k35", "*", "RaDPPGPPxP"}], " ", "-", " ", 
+     RowBox[{"k36", "*", "RaDPPGPPxP"}]}]}], ";"}], " ", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dRhDRhEdt", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "k1"}], "*", "RhE", "*", "RhD"}], "-", 
+    RowBox[{"k2", "*", "RhDRhE"}], "-", 
+    RowBox[{"k3", "*", "RhDRhE"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dRhEdt", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "k1"}], "*", "RhE", "*", "RhD"}], "+", 
+     RowBox[{"k2", "*", "RhDRhE"}], "+", 
+     RowBox[{"k3", "*", "RhDRhE"}]}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"totRaE", "=", 
+     RowBox[{"RaE", "+", "nRaE", "+", "totPIX"}]}], ";", "\n", 
+    RowBox[{"totPx", "=", 
+     RowBox[{
+     "Px", "+", "PxP", "+", "PxTP", "+", "PxFAK", "+", "PxPFAK", "+", 
+      "PxTPFAK", "+", "PxTPCrk", "+", "PPGPPxP", "+", "Quart"}]}], ";", "\n", 
+    RowBox[{"totGIT", "=", 
+     RowBox[{
+     "GIT", "+", "GITP", "+", "PIXGIT", "+", "PPG", "+", "PIXGITP", "+", 
+      "PPGP", "+", "PPGPPxP", "+", "Quart"}]}], ";", "\n", 
+    RowBox[{"totPIX", "=", 
+     RowBox[{
+     "PIX", "+", "PIXGIT", "+", "PAKPIX", "+", "PPG", "+", "PIXGITP", "+", 
+      "PPGP", "+", "PPGPPxP", "+", "Quart"}]}], ";", "\n", 
+    RowBox[{"totPAK", "=", 
+     RowBox[{
+     "PAK", "+", "RaTPAK", "+", "PAKPIX", "+", "PPG", "+", "PPGP", "+", 
+      "PPGPPxP", "+", "Quart"}]}], ";", "\n", 
+    RowBox[{"totRaT", "=", 
+     RowBox[{"RaT", "+", "RaTPAK"}]}], ";", "\n", 
+    RowBox[{"totFAK", "=", 
+     RowBox[{"FAK", "+", "PxFAK", "+", "PxPFAK", "+", "PxTPFAK"}]}], ";", 
+    "\n", 
+    RowBox[{"totCrk", "=", 
+     RowBox[{"Crk", "+", "PxTPCrk"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"totRho", " ", "=", " ", 
+     RowBox[{"RhD", " ", "+", " ", "RhT"}]}], ";", "\n", 
+    RowBox[{"totRac", " ", "=", " ", 
+     RowBox[{
+     "RaD", " ", "+", " ", "RaT", " ", "+", " ", "RaTPAK", " ", "+", " ", 
+      "Quart"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"totCrk", " ", "=", " ", 
+     RowBox[{"Crk", " ", "+", " ", "PxTPCrk"}]}], ";", "\n", 
+    RowBox[{"totnRaE", " ", "=", " ", 
+     RowBox[{"nRaE", " ", "+", " ", "xnRaE"}]}], ";"}], "\[IndentingNewLine]",
+    "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.821841737447444*^9, 3.821841737452552*^9}, {
+   3.82184178864526*^9, 3.821842168154344*^9}, {3.8218422302895885`*^9, 
+   3.8218423012429795`*^9}, {3.8218423593464365`*^9, 3.821842699320551*^9}, {
+   3.8218427665682473`*^9, 3.8218433135113773`*^9}, {3.8218433518557053`*^9, 
+   3.821843412598793*^9}, 3.8218434430782332`*^9, {3.821843491653508*^9, 
+   3.821843564982033*^9}, {3.8218436034782686`*^9, 3.821843690358642*^9}, {
+   3.821843724261552*^9, 3.821843791798027*^9}, {3.821843827557169*^9, 
+   3.8218440316528025`*^9}, {3.821844073716529*^9, 3.8218443701150155`*^9}, {
+   3.821844406627241*^9, 3.8218444408514595`*^9}, {3.8218445053327646`*^9, 
+   3.821844536050965*^9}, {3.8218445663549733`*^9, 3.8218447447065215`*^9}, {
+   3.821844781891814*^9, 3.8218448139544325`*^9}, {3.821844874785889*^9, 
+   3.8218449379542665`*^9}, {3.82184499641755*^9, 3.8218451059693375`*^9}, {
+   3.821845143393097*^9, 3.821845236224763*^9}, {3.821845267296751*^9, 
+   3.8218453176006064`*^9}, {3.821845350032419*^9, 3.8218457084472404`*^9}, {
+   3.8218466589580135`*^9, 3.8218466885242367`*^9}, {3.821846732700534*^9, 
+   3.8218470538034487`*^9}, {3.8218471347316847`*^9, 
+   3.8218471529385595`*^9}, {3.8218472314830503`*^9, 3.821847235402334*^9}, {
+   3.8218472842987328`*^9, 3.821847334651019*^9}, {3.821847436778468*^9, 
+   3.8218477771767793`*^9}, {3.821847808248413*^9, 3.8218482970155735`*^9}, {
+   3.8218484165193586`*^9, 3.821848457113562*^9}, {3.821848497047222*^9, 
+   3.8218485596566668`*^9}, {3.821848602902158*^9, 3.8218486276542544`*^9}, {
+   3.8218486816379504`*^9, 3.8218487006297064`*^9}, {3.821848776583289*^9, 
+   3.821848848597522*^9}, {3.8218488927591743`*^9, 3.8218489390617485`*^9}, {
+   3.8218490424701843`*^9, 3.8218490554930115`*^9}, {3.8218490968529816`*^9, 
+   3.821849161395793*^9}, {3.821849356820258*^9, 3.8218497016665*^9}, {
+   3.8218497738426075`*^9, 3.8218499255380726`*^9}, {3.8218499800016813`*^9, 
+   3.8218502005290947`*^9}, {3.821850251680818*^9, 3.821850433903819*^9}, {
+   3.8218504674993725`*^9, 3.821850529776231*^9}, {3.821850566304375*^9, 
+   3.821851021934692*^9}, 3.821851086239723*^9, {3.821851128094593*^9, 
+   3.8218511320954*^9}, {3.821851365265518*^9, 3.821851369854103*^9}, {
+   3.8218514237587585`*^9, 3.8218514256624246`*^9}, {3.8218894607750835`*^9, 
+   3.821889553559558*^9}, 3.8218896189658513`*^9, {3.8218947380190234`*^9, 
+   3.8218947385940247`*^9}, {3.8218948963214455`*^9, 3.821894961377097*^9}, {
+   3.8218950675212994`*^9, 3.8218950707373*^9}, 3.8219017715712204`*^9, 
+   3.82190214746624*^9, {3.8219023511582828`*^9, 3.8219023801322837`*^9}, {
+   3.821915169060385*^9, 3.821915171671384*^9}, {3.8219154204343567`*^9, 
+   3.821915421154582*^9}, {3.8219155224056497`*^9, 3.82191552271946*^9}, 
+   3.8219155754790354`*^9},ExpressionUUID->"6308a2b3-e5b5-4395-b960-\
+19f555e985e3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "k2"}], " ", "RhDRhE"}], "+", 
+  RowBox[{"k1", " ", "RhD", " ", "RhE"}]}]], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[118]:=",ExpressionUUID->"945481cb-89a5-4dab-a96f-793f49b914fe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "k2"}], " ", "RhDRhE"}], "+", 
+  RowBox[{"k1", " ", "RhD", " ", "RhE"}]}]], "Output",
+ CellChangeTimes->{3.821915426208141*^9},
+ CellLabel->
+  "Out[118]=",ExpressionUUID->"9aaee968-907b-4ae9-89da-f800b7facede"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SlowRxns", " ", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "dRaTdt", ",", "dRhTdt", ",", "dRaDdt", ",", "dRhDdt", ",", "dPxdt", ",",
+       "dPxPdt", ",", "dPxTPdt"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "dQuartdt", ",", "dPPGPPxPdt", ",", "dPPGdt", ",", "dPPGPdt", ",", "dPGdt",
+     ",", "dPGPdt", ",", "dRaTPAKdt"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FastRxns", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "dPPGPPxPdt", "\[IndentingNewLine]", ",", "dPAKPIXdt", ",", "dRaDRaEdt", 
+      ",", "dRaAdt", ",", "dPPGPPESTdt", ",", "dRaDPGdt", ",", "dRhDRhEdt", 
+      ",", "dGITFAKdt", ",", "dPIXdt", ",", "dRaEdt", ",", "dRaDPPGPPxPdt", 
+      ",", "dRaTRaAdt", ",", "dPGFAKdt", ",", "dCrkdt", ",", "dxnRaEdt", ",", 
+      "dPPGFAKdt", ",", "dRhEdt", ",", "dPPGdt", ",", "dRaDPIXdt", ",", 
+      "dPESTdt", ",", "dGITdt", ",", "dQuartdt", ",", "dRhTRhAdt", ",", 
+      "dFAKdt", ",", "dPxTPCrkxnRaEdt", ",", "dPAKdt", ",", "dPxRaTPAKdt", 
+      ",", "dPGdt", ",", "dPPGPdt", ",", "dRaDPPGdt", ",", "dRaDPAKPIXdt", 
+      ",", "dPxTPCrkdt", ",", "dnRaEdt", ",", "dGITPPESTdt", ",", 
+      "dPxTPFAKdt", ",", "dRaDPGPdt", ",", "dRaDPPGPdt", ",", "dRaTPAKdt", 
+      ",", "dGITPdt", ",", "dPGPdt", ",", "dPGPPESTdt", ",", "dRhAdt", ",", 
+      "dPxTPPESTdt", ",", "dPxQuartdt", ",", "dPxFAKdt", ",", "dRaDnRaEdt", 
+      ",", 
+      RowBox[{"dPxPFAKdt", "'"}]}], 
+     RowBox[{"(*", "*)"}], "\[IndentingNewLine]", "}"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Quart", ",", "PPGPPxP", ",", "PPG", ",", "PPGP", ",", "PG", ",", "PGP", 
+    ",", "RaTPAK"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FastSpecies", " ", "=", " ", 
+   RowBox[{"{", " ", 
+    RowBox[{
+    "PPGPPxP", "\[IndentingNewLine]", ",", "PAKPIX", ",", "RaDRaE", ",", 
+     "RaA", "\[IndentingNewLine]", ",", "PPGPPEST", ",", "RaDPG", ",", 
+     "RhDRhE", ",", "GITFAK", ",", "PIX", ",", "RaE", ",", "RaDPPGPPxP", ",", 
+     "RaTRaA", ",", "PGFAK", ",", "Crk", ",", "xnRaE", ",", "PPGFAK", ",", 
+     "RhE", ",", "PPG", ",", "RaDPIX", ",", "PEST", ",", "GIT", ",", "Quart", 
+     ",", "RhTRhA", ",", "FAK", ",", "PxTPCrkxnRaE", ",", "PAK", ",", 
+     "PxRaTPAK", ",", "PG", ",", "PPGP", ",", "RaDPPG", ",", "RaDPAKPIX", ",",
+      "PxTPCrk", ",", "nRaE", ",", "GITPPEST", ",", "PxTPFAK", ",", "RaDPGP", 
+     ",", "RaDPPGP", ",", "RaTPAK", ",", "GITP", ",", "PGP", ",", "PGPPEST", 
+     ",", "RhA", ",", "PxTPPEST", ",", "PxQuart", ",", "PxFAK", ",", 
+     "RaDnRaE", ",", "PxPFAK"}], 
+    RowBox[{"(*", "*)"}], "\[IndentingNewLine]", "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8218511514861403`*^9, 3.821851153949665*^9}, 
+   3.8218512089890556`*^9, {3.821851479821309*^9, 3.8218514879806824`*^9}, {
+   3.821885001345839*^9, 3.8218850600976176`*^9}, {3.821885165825103*^9, 
+   3.8218852322732115`*^9}, 3.8218852828325624`*^9, {3.8218854063045053`*^9, 
+   3.8218854152804985`*^9}, {3.821888909193453*^9, 3.821888977547496*^9}, {
+   3.8218890134433465`*^9, 3.8218891084716673`*^9}, {3.8218893444886*^9, 
+   3.8218894552858086`*^9}, {3.8218898915724306`*^9, 
+   3.8218899277957916`*^9}, {3.8218943034854946`*^9, 
+   3.8218944248033915`*^9}, {3.8218946503298283`*^9, 
+   3.8218946728022165`*^9}, {3.8219155227214603`*^9, 3.8219155227244616`*^9}},
+ CellLabel->
+  "In[119]:=",ExpressionUUID->"f1e57721-1e24-4b87-a411-2f231fdc200f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["%119"], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[122]:=",ExpressionUUID->"ed9c16a7-aa9e-4a75-88b8-f7b823fdb0e3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"k92", " ", "Quart"}], "+", 
+    RowBox[{"k15", " ", "RaDnRaE"}], "+", 
+    RowBox[{"k21", " ", "RaDPAKPIX"}], "+", 
+    RowBox[{"k24", " ", "RaDPG"}], "+", 
+    RowBox[{"k27", " ", "RaDPGP"}], "+", 
+    RowBox[{"k18", " ", "RaDPIX"}], "+", 
+    RowBox[{"k30", " ", "RaDPPG"}], "+", 
+    RowBox[{"k33", " ", "RaDPPGP"}], "+", 
+    RowBox[{"k36", " ", "RaDPPGPPxP"}], "+", 
+    RowBox[{"k12", " ", "RaDRaE"}], "-", 
+    RowBox[{"k37", " ", "PAK", " ", "RaT"}], "-", 
+    RowBox[{"k91", " ", "PPGPPxP", " ", "RaT"}], "-", 
+    RowBox[{"k7", " ", "RaA", " ", "RaT"}], "+", 
+    RowBox[{"k38", " ", "RaTPAK"}], "+", 
+    RowBox[{"k8", " ", "RaTRaA"}]}], ",", 
+   RowBox[{
+    RowBox[{"k3", " ", "RhDRhE"}], "-", 
+    RowBox[{"k4", " ", "RhA", " ", "RhT"}], "+", 
+    RowBox[{"k5", " ", "RhTRhA"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "k13"}], " ", "nRaE", " ", "RaD"}], "-", 
+    RowBox[{"k19", " ", "PAKPIX", " ", "RaD"}], "-", 
+    RowBox[{"k22", " ", "PG", " ", "RaD"}], "-", 
+    RowBox[{"k25", " ", "PGP", " ", "RaD"}], "-", 
+    RowBox[{"k16", " ", "PIX", " ", "RaD"}], "-", 
+    RowBox[{"k28", " ", "PPG", " ", "RaD"}], "-", 
+    RowBox[{"k31", " ", "PPGP", " ", "RaD"}], "-", 
+    RowBox[{"k34", " ", "PPGPPxP", " ", "RaD"}], "+", 
+    RowBox[{"k14", " ", "RaDnRaE"}], "+", 
+    RowBox[{"k20", " ", "RaDPAKPIX"}], "+", 
+    RowBox[{"k23", " ", "RaDPG"}], "+", 
+    RowBox[{"k26", " ", "RaDPGP"}], "+", 
+    RowBox[{"k17", " ", "RaDPIX"}], "+", 
+    RowBox[{"k29", " ", "RaDPPG"}], "+", 
+    RowBox[{"k32", " ", "RaDPPGP"}], "+", 
+    RowBox[{"k35", " ", "RaDPPGPPxP"}], "-", 
+    RowBox[{"k10", " ", "RaD", " ", "RaE"}], "+", 
+    RowBox[{"k9", " ", "RaTRaA"}]}], ",", 
+   RowBox[{
+    RowBox[{"k2", " ", "RhDRhE"}], "-", 
+    RowBox[{"k1", " ", "RhD", " ", "RhE"}], "+", 
+    RowBox[{"k6", " ", "RhTRhA"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "FAK"}], " ", "k42", " ", "Px"}], "-", 
+    RowBox[{"FAK", " ", "k51", " ", "Px"}], "+", 
+    RowBox[{"k43", " ", "PxFAK"}], "+", 
+    RowBox[{"k52", " ", "PxFAK"}], "+", 
+    RowBox[{"k47", " ", "PxPPP2A"}], "+", 
+    RowBox[{"k94", " ", "PxQuart"}], "+", 
+    RowBox[{"k40", " ", "PxRaTPAK"}], "+", 
+    RowBox[{"k50", " ", "PxTPPEST"}], "-", 
+    RowBox[{"k93", " ", "Px", " ", "Quart"}], "-", 
+    RowBox[{"k39", " ", "Px", " ", "RaTPAK"}]}], ",", 
+   RowBox[{
+    RowBox[{"k90", " ", "PPGPPxP"}], "-", 
+    RowBox[{"FAK", " ", "k53", " ", "PxP"}], "-", 
+    RowBox[{"k45", " ", "PP2A", " ", "PxP"}], "-", 
+    RowBox[{"k89", " ", "PPGP", " ", "PxP"}], "+", 
+    RowBox[{"k54", " ", "PxPFAK"}], "+", 
+    RowBox[{"k46", " ", "PxPPP2A"}], "+", 
+    RowBox[{"k95", " ", "PxQuart"}], "+", 
+    RowBox[{"k41", " ", "PxRaTPAK"}]}], ",", 
+   RowBox[{
+    RowBox[{"k44", " ", "PxFAK"}], "-", 
+    RowBox[{"FAK", " ", "k55", " ", "PxTP"}], "-", 
+    RowBox[{"Crk", " ", "k96", " ", "PxTP"}], "-", 
+    RowBox[{"k48", " ", "PEST", " ", "PxTP"}], "+", 
+    RowBox[{"k97", " ", "PxTPCrk"}], "-", 
+    RowBox[{"k56", " ", "PxTPFAK"}], "+", 
+    RowBox[{"k49", " ", "PxTPPEST"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.821915469873312*^9},
+ CellLabel->
+  "Out[122]=",ExpressionUUID->"0afa8cbd-0ff3-46dc-9bc1-d5e540cf301b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QSSA", " ", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "\[Equal]", "0"}], "&"}], "/@", "FastRxns"}], ",", 
+    "FastSpecies"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8218895961833577`*^9, 3.8218896109174423`*^9}},
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"baa0b4c3-1c0f-4d0c-bba5-64c049f813ba"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"PPGPPxP", "\[Rule]", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"k90", "+", 
+       RowBox[{"k91", " ", "RaT"}]}]], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"k89", " ", "PPGP", " ", "PxP"}], "-", 
+       RowBox[{"k92", " ", "Quart"}], "-", 
+       RowBox[{"k34", " ", "PPGPxP", " ", "RaD"}], "+", 
+       RowBox[{"k35", " ", "RaDPPGPPxP"}], "+", 
+       RowBox[{"k36", " ", "RaDPPGPxP"}]}], ")"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.821851493856555*^9, 3.8218850652491307`*^9, 3.8218852951344843`*^9, {
+   3.8218895850333138`*^9, 3.8218895982955985`*^9}, 3.821889880469807*^9, 
+   3.821889935059226*^9, {3.8218943247609954`*^9, 3.8218943532087574`*^9}, {
+   3.8218944045638866`*^9, 3.8218944178469687`*^9}},
+ CellLabel->
+  "Out[351]=",ExpressionUUID->"282f17d4-f390-4ccc-ad29-dc799310b1fa"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SlowRxns", "/.", "QSSA"}], " ", "//", "FullSimplify"}]], "Input",
+ CellChangeTimes->{3.821885153873263*^9},
+ CellLabel->
+  "In[204]:=",ExpressionUUID->"2d3b963f-cfb9-4cee-abb5-feabd12d0c0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"simp", "=", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"R1", "=", 
+     RowBox[{
+      RowBox[{"k1", "*", "RhD", "*", "RhE"}], "-", 
+      RowBox[{"k2", "*", "RhDRhE"}]}]}], ",", "\n", 
+    RowBox[{"R2", "=", 
+     RowBox[{"k3", "*", "RhDRhE"}]}], ",", "\n", 
+    RowBox[{"R3", "=", 
+     RowBox[{
+      RowBox[{"k4", "*", "RhT", "*", "RhA"}], "-", 
+      RowBox[{"k5", "*", "RhTRhA"}]}]}], ",", "\n", 
+    RowBox[{"R4", "=", 
+     RowBox[{"k6", "*", "RhTRhA"}]}], ",", "\n", 
+    RowBox[{"R5", "=", 
+     RowBox[{
+      RowBox[{"k7", "*", "RaT", "*", "RaA"}], "-", 
+      RowBox[{"k8", "*", "RaTRaA"}]}]}], ",", "\n", 
+    RowBox[{"R6", "=", 
+     RowBox[{"k9", "*", "RaTRaA"}]}], ",", "\n", 
+    RowBox[{"R7", "=", 
+     RowBox[{
+      RowBox[{"k10", "*", "RaD", "*", "RaE"}], "-", 
+      RowBox[{"k11", "*", "RaDRaE"}]}]}], ",", "\n", 
+    RowBox[{"R8", "=", 
+     RowBox[{"k12", "*", "RaDRaE"}]}], ",", "\n", 
+    RowBox[{"R9", "=", 
+     RowBox[{
+      RowBox[{"k13", "*", "RaD", "*", "nRaE"}], "-", 
+      RowBox[{"k14", "*", "RaDnRaE"}]}]}], ",", "\n", 
+    RowBox[{"R10", "=", 
+     RowBox[{"k15", "*", "RaDnRaE"}]}], ",", "\n", 
+    RowBox[{"R11", "=", 
+     RowBox[{
+      RowBox[{"k16", "*", "RaD", "*", "PIX"}], "-", 
+      RowBox[{"k17", "*", "RaDPIX"}]}]}], ",", "\n", 
+    RowBox[{"R12", "=", 
+     RowBox[{"k18", "*", "RaDPIX"}]}], ",", "\n", 
+    RowBox[{"R13", "=", 
+     RowBox[{
+      RowBox[{"k19", "*", "RaD", "*", "PAKPIX"}], "-", 
+      RowBox[{"k20", "*", "RaDPAKPIX"}]}]}], ",", "\n", 
+    RowBox[{"R14", "=", 
+     RowBox[{"k21", "*", "RaDPAKPIX"}]}], ",", "\n", 
+    RowBox[{"R15", "=", 
+     RowBox[{
+      RowBox[{"k22", "*", "RaD", "*", "PG"}], "-", 
+      RowBox[{"k23", "*", "RaDPG"}]}]}], ",", "\n", 
+    RowBox[{"R16", "=", 
+     RowBox[{"k24F", "*", "RaDPG"}]}], ",", "\n", 
+    RowBox[{"R17", "=", 
+     RowBox[{
+      RowBox[{"k25", "*", "RaD", "*", "PGP"}], "-", 
+      RowBox[{"k26", "*", "RaDPGP"}]}]}], ",", "\n", 
+    RowBox[{"R18", "=", 
+     RowBox[{"k27", "*", "RaDPGP"}]}], ",", "\n", 
+    RowBox[{"R19", "=", 
+     RowBox[{
+      RowBox[{"k28", "*", "RaD", "*", "PPG"}], "-", 
+      RowBox[{"k29", "*", "RaDPPG"}]}]}], ",", "\n", 
+    RowBox[{"R20", "=", 
+     RowBox[{"k30", "*", "RaDPPG"}]}], ",", "\n", 
+    RowBox[{"R21", "=", 
+     RowBox[{
+      RowBox[{"k31", "*", "RaD", "*", "PPGP"}], "-", 
+      RowBox[{"k32", "*", "RaDPPGP"}]}]}], ",", "\n", 
+    RowBox[{"R22", "=", 
+     RowBox[{"k33", "*", "RaDPPGP"}]}], ",", "\n", 
+    RowBox[{"R23", "=", 
+     RowBox[{
+      RowBox[{"k34", "*", "RaD", "*", "PPGPPxP"}], "-", 
+      RowBox[{"k35", "*", "RaDPPGPPxP"}]}]}], ",", "\n", 
+    RowBox[{"R24", "=", 
+     RowBox[{"k36", "*", "RaDPPGPPxP"}]}], ",", "\n", 
+    RowBox[{"R25", "=", 
+     RowBox[{
+      RowBox[{"k37", "*", "RaT", "*", "PAK"}], "-", 
+      RowBox[{"k38", "*", "RaTPAK"}]}]}], ",", "\n", 
+    RowBox[{"R26", "=", 
+     RowBox[{
+      RowBox[{"k39", "*", "Px", "*", "RaTPAK"}], "-", 
+      RowBox[{"k40", "*", "PxRaTPAK"}]}]}], ",", "\n", 
+    RowBox[{"R27", "=", 
+     RowBox[{"k41", "*", "PxRaTPAK"}]}], ",", "\n", 
+    RowBox[{"R28", "=", 
+     RowBox[{
+      RowBox[{"k42", "*", "Px", "*", "FAK"}], "-", 
+      RowBox[{"k43", "*", "PxFAK"}]}]}], ",", "\n", 
+    RowBox[{"R29", "=", 
+     RowBox[{"k44", "*", "PxFAK"}]}], ",", "\n", 
+    RowBox[{"R30", "=", 
+     RowBox[{
+      RowBox[{"k45", "*", "PxP", "*", "PP2A"}], "-", 
+      RowBox[{"k46", "*", "PxPPP2A"}]}]}], ",", "\n", 
+    RowBox[{"R31", "=", 
+     RowBox[{"k47", "*", "PxPPP2A"}]}], ",", "\n", 
+    RowBox[{"R32", "=", 
+     RowBox[{
+      RowBox[{"k48", "*", "PxTP", "*", "PEST"}], "-", 
+      RowBox[{"k49", "*", "PxTPPEST"}]}]}], ",", "\n", 
+    RowBox[{"R33", "=", 
+     RowBox[{"k50", "*", "PxTPPEST"}]}], ",", "\n", 
+    RowBox[{"R34", "=", 
+     RowBox[{
+      RowBox[{"k53", "*", "PxP", "*", "FAK"}], "-", 
+      RowBox[{"k54", "*", "PxPFAK"}]}]}], ",", "\n", 
+    RowBox[{"R35", "=", 
+     RowBox[{
+      RowBox[{"k55", "*", "PxTP", "*", "FAK"}], "-", 
+      RowBox[{"k56", "*", "PxTPFAK"}]}]}], ",", "\n", 
+    RowBox[{"R36", "=", 
+     RowBox[{
+      RowBox[{"k57", "*", "GIT", "*", "FAK"}], "-", 
+      RowBox[{"k58", "*", "GITFAK"}]}]}], ",", "\n", 
+    RowBox[{"R37", "=", 
+     RowBox[{"k59", "*", "GITFAK"}]}], ",", "\n", 
+    RowBox[{"R38", "=", 
+     RowBox[{
+      RowBox[{"k60", "*", "GITP", "*", "PEST"}], "-", 
+      RowBox[{"k61", "*", "GITPPEST"}]}]}], ",", "\n", 
+    RowBox[{"R39", "=", 
+     RowBox[{"k62", "*", "GITPPEST"}]}], ",", "\n", 
+    RowBox[{"R40", "=", 
+     RowBox[{
+      RowBox[{"k63", "*", "PG", "*", "FAK"}], "-", 
+      RowBox[{"k64", "*", "PGFAK"}]}]}], ",", "\n", 
+    RowBox[{"R41", "=", 
+     RowBox[{"k65", "*", "PGFAK"}]}], ",", "\n", 
+    RowBox[{"R42", "=", 
+     RowBox[{
+      RowBox[{"k66", "*", "PGP", "*", "PEST"}], "-", 
+      RowBox[{"k67", "*", "PGPPEST"}]}]}], ",", "\n", 
+    RowBox[{"R43", "=", 
+     RowBox[{"k68", "*", "PGPPEST"}]}], ",", "\n", 
+    RowBox[{"R44", "=", 
+     RowBox[{
+      RowBox[{"k69", "*", "PPG", "*", "FAK"}], "-", 
+      RowBox[{"k70", "*", "PPGFAK"}]}]}], ",", "\n", 
+    RowBox[{"R45", "=", 
+     RowBox[{"k71", "*", "PPGFAK"}]}], ",", "\n", 
+    RowBox[{"R46", "=", 
+     RowBox[{
+      RowBox[{"k72", "*", "PPGP", "*", "PEST"}], "-", 
+      RowBox[{"k73", "*", "PPGPPEST"}]}]}], ",", "\n", 
+    RowBox[{"R47", "=", 
+     RowBox[{"k74", "*", "PPGPPEST"}]}], ",", "\n", 
+    RowBox[{"R48", "=", 
+     RowBox[{
+      RowBox[{"k75", "*", "PAK", "*", "PIX"}], "-", 
+      RowBox[{"k76", "*", "PAKPIX"}]}]}], ",", "\n", 
+    RowBox[{"R49", "=", 
+     RowBox[{
+      RowBox[{"k77", "*", "PIX", "*", "GIT"}], "-", 
+      RowBox[{"k78", "*", "PG"}]}]}], ",", "\n", 
+    RowBox[{"R50", "=", 
+     RowBox[{
+      RowBox[{"k79", "*", "PIX", "*", "GITP"}], "-", 
+      RowBox[{"k80", "*", "PGP"}]}]}], ",", "\n", 
+    RowBox[{"R51", "=", 
+     RowBox[{
+      RowBox[{"k81", "*", "PAK", "*", "PG"}], "-", 
+      RowBox[{"k82", "*", "PPG"}]}]}], ",", "\n", 
+    RowBox[{"R52", "=", 
+     RowBox[{
+      RowBox[{"k83", "*", "PAK", "*", "PGP"}], "-", 
+      RowBox[{"k84", "*", "PPGP"}]}]}], ",", "\n", 
+    RowBox[{"R53", "=", 
+     RowBox[{
+      RowBox[{"k85", "*", "PAKPIX", "*", "GIT"}], "-", 
+      RowBox[{"k86", "*", "PPG"}]}]}], ",", "\n", 
+    RowBox[{"R54", "=", 
+     RowBox[{
+      RowBox[{"k87", "*", "PAKPIX", "*", "GITP"}], "-", 
+      RowBox[{"k88", "*", "PPGP"}]}]}], ",", "\n", 
+    RowBox[{"R55", "=", 
+     RowBox[{
+      RowBox[{"k89", "*", "PPGP", "*", "PxP"}], "-", 
+      RowBox[{"k90", "*", "PPGPPxP"}]}]}], ",", "\n", 
+    RowBox[{"R56", "=", 
+     RowBox[{
+      RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], "-", 
+      RowBox[{"k92", "*", "Quart"}]}]}], ",", "\n", 
+    RowBox[{"R57", "=", 
+     RowBox[{
+      RowBox[{"k93", "*", "Px", "*", "Quart"}], "-", 
+      RowBox[{"k94", "*", "PxQuart"}]}]}], ",", "\n", 
+    RowBox[{"R58", "=", 
+     RowBox[{"k95", "*", "PxQuart"}]}], ",", "\n", 
+    RowBox[{"R59", "=", 
+     RowBox[{
+      RowBox[{"k96", "*", "PxTP", "*", "Crk"}], "-", 
+      RowBox[{"k97", "*", "PxTPCrk"}]}]}], ",", "\n", 
+    RowBox[{"R60", "=", 
+     RowBox[{
+      RowBox[{"k98", "*", "PxTPCrk", "*", "xnRaE"}], "-", 
+      RowBox[{"k99", "*", "PxTPCrkxnRaE"}]}]}], ",", "\n", 
+    RowBox[{"R61", "=", 
+     RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", "\n", 
+    RowBox[{"dRaTdt", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", " ", "k7"}], "*", "RaT", "*", "RaA"}], " ", "+", " ", 
+      RowBox[{"k8", "*", "RaTRaA"}], " ", "+", " ", 
+      RowBox[{"k12", "*", "RaDRaE"}], " ", "+", " ", 
+      RowBox[{"k15", "*", "RaDnRaE"}], " ", "+", " ", 
+      RowBox[{"k18", "*", "RaDPIX"}], "+", " ", 
+      RowBox[{"k21", "*", "RaDPAKPIX"}], "+", " ", 
+      RowBox[{"k24", "*", "RaDPG"}], "+", " ", 
+      RowBox[{"k27", "*", "RaDPGP"}], "+", " ", 
+      RowBox[{"k30", "*", "RaDPPG"}], "+", " ", 
+      RowBox[{"k33", "*", "RaDPPGP"}], " ", "+", " ", 
+      RowBox[{"k36", "*", "RaDPPGPPxP"}], " ", "-", " ", 
+      RowBox[{"k37", "*", "RaT", "*", "PAK"}], " ", "+", " ", 
+      RowBox[{"k38", "*", "RaTPAK"}], " ", "-", " ", 
+      RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], " ", "+", " ", 
+      RowBox[{"k92", "*", "Quart"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRaDdt", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", " ", "k9"}], "*", "RaTRaA"}], " ", "-", " ", 
+      RowBox[{"k10", "*", "RaD", "*", "RaE"}], " ", "-", " ", 
+      RowBox[{"k13", "*", "RaD", "*", "nRaE"}], " ", "+", 
+      RowBox[{"k14", "*", "RaDnRaE"}], "-", 
+      RowBox[{"k16", "*", "RaD", "*", "PIX"}], " ", "+", " ", 
+      RowBox[{"k17", "*", "RaDPIX"}], " ", "-", 
+      RowBox[{"k19", "*", "RaD", "*", "PAKPIX"}], " ", "+", " ", 
+      RowBox[{"k20", "*", "RaDPAKPIX"}], "-", 
+      RowBox[{"k22", "*", "RaD", "*", "PG"}], " ", "+", " ", 
+      RowBox[{"k23", "*", "RaDPG"}], " ", "-", 
+      RowBox[{"k25", "*", "RaD", "*", "PGP"}], " ", "+", " ", 
+      RowBox[{"k26", "*", "RaDPGP"}], " ", "-", " ", 
+      RowBox[{"k28", "*", "RaD", "*", "PPG"}], "+", 
+      RowBox[{"k29", "*", "RaDPPG"}], " ", "-", " ", 
+      RowBox[{"k31", "*", "RaD", "*", "PPGP"}], " ", "+", " ", 
+      RowBox[{"k32", "*", "RaDPPGP"}], "-", 
+      RowBox[{"k34", "*", "RaD", "*", "PPGPPxP"}], "+", 
+      RowBox[{"k35", "*", "RaDPPGPPxP"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRhTdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", "k3"}], "*", "RhDRhE"}], "-", 
+      RowBox[{"k4", "*", "RhT", "*", "RhA"}], "+", 
+      RowBox[{"k5", "*", "RhTRhA"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRhDdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k1"}], "*", "RhD", "*", "RhE"}], "+", 
+      RowBox[{"k2", "*", "RhDRhE"}], "+", 
+      RowBox[{"k6", "*", "RhTRhA"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k39"}], "*", "Px", "*", "RaTPAK"}], "+", 
+      RowBox[{"k40", "*", "PxRaTPAK"}], "-", 
+      RowBox[{"k42", "*", "Px", "*", "FAK"}], "+", 
+      RowBox[{"k43", "*", "PxFAK"}], "+", 
+      RowBox[{"k47", "*", "PxPPP2A"}], "+", 
+      RowBox[{"k50", "*", "PxTPPEST"}], "-", 
+      RowBox[{"k51", "*", "Px", "*", "FAK"}], "+", 
+      RowBox[{"k52", "*", "PxFAK"}], "-", 
+      RowBox[{"k93", "*", "Px", "*", "Quart"}], "+", 
+      RowBox[{"k94", "*", "PxQuart"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxPdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", "k41"}], "*", "PxRaTPAK"}], "-", 
+      RowBox[{"k45", "*", "PxP", "*", "PP2A"}], "+", 
+      RowBox[{"k46", "*", "PxPPP2A"}], "-", 
+      RowBox[{"k53", "*", "PxP", "*", "FAK"}], "+", 
+      RowBox[{"k54", "*", "PxPFAK"}], "-", 
+      RowBox[{"k89", "*", "PxP", "*", "PPGP"}], "+", 
+      RowBox[{"k90", "*", "PPGPPxP"}], "+", 
+      RowBox[{"k95", "*", "PxQuart"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxTPdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k44", "*", "PxFAK"}], " ", "-", " ", 
+      RowBox[{"k48", "*", "PxTP", "*", "PEST"}], "+", 
+      RowBox[{"k49", "*", "PxTPPEST"}], "-", 
+      RowBox[{"k55", "*", "PxTP", "*", "FAK"}], "-", 
+      RowBox[{"k56", "*", "PxTPFAK"}], "-", 
+      RowBox[{"k96", "*", "PxTP", "*", "Crk"}], "+", 
+      RowBox[{"k97", "*", "PxTPCrk"}]}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"dRaAdt", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k7"}], "*", "RaA", "*", "RaT"}], "+", 
+      RowBox[{"k8", "*", "RaTRaA"}], "+", 
+      RowBox[{"k9", "*", "RaTRaA"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRaTRaAdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", "k7"}], "*", "RaT", "*", "RaA"}], "-", 
+      RowBox[{"k8", "*", "RaTRaA"}], "-", 
+      RowBox[{"k9", "*", "RaTRaA"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRhAdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k4"}], "*", "RhA", "*", "RhT"}], "+", 
+      RowBox[{"k5", "*", "RhTRhA"}], "+", 
+      RowBox[{"k6", "*", "RhTRhA"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRhTRhAdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", "k4"}], "*", "RhT", "*", "RhA"}], "-", 
+      RowBox[{"k5", "*", "RhTRhA"}], "-", 
+      RowBox[{"k6", "*", "RhTRhA"}]}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"dPAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k37"}], "*", "RaT", "*", "PAK"}], "+", 
+      RowBox[{"k38", "*", "RaTPAK"}], "-", 
+      RowBox[{"k75", "*", "PAK", "*", "PIX"}], "+", 
+      RowBox[{"k76", "*", "PAKPIX"}], "-", 
+      RowBox[{"k81", "*", "PAK", "*", "PG"}], "+", 
+      RowBox[{"k82", "*", "PPG"}], "-", 
+      RowBox[{"k83", "*", "PAK", "*", "PGP"}], "+", 
+      RowBox[{"k84", "*", "PPGP"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dRaTPAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k37", "*", "RaT", "*", "PAK"}], "-", 
+      RowBox[{"k38", "*", "RaTPAK"}], "-", 
+      RowBox[{"k39", "*", "Px", "*", "RaTPAK"}], "+", 
+      RowBox[{"k40", "*", "PxRaTPAK"}], "+", 
+      RowBox[{"k41", "*", "PxRaTPAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxRaTPAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k39", "*", "Px", "*", "RaTPAK"}], "-", 
+      RowBox[{"k40", "*", "PxRaTPAK"}], "-", 
+      RowBox[{"k41", "*", "PxRaTPAK"}]}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"dPIXdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k16"}], "*", "RaD", "*", "PIX"}], "+", 
+      RowBox[{"k17", "*", "RaDPIX"}], " ", "+", " ", 
+      RowBox[{"k18", "*", "RadPIX"}], "-", 
+      RowBox[{"k75", "*", "PAK", "*", "PIX"}], "+", 
+      RowBox[{"k76", "*", "PAKPIX"}], "-", 
+      RowBox[{"k77", "*", "PIX", "*", "GIT"}], "+", 
+      RowBox[{"k78", "*", "PG"}], "-", 
+      RowBox[{"k79", "*", "PIX", "*", "GITP"}], "+", 
+      RowBox[{"k80", "*", "PGP"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dGITdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k57"}], "*", "GIT", "*", "FAK"}], "+", 
+      RowBox[{"k58", "*", "GITFAK"}], "+", 
+      RowBox[{"k62", "*", "GITPPEST"}], "-", 
+      RowBox[{"k77", "*", "GIT", "*", "PIX"}], "+", 
+      RowBox[{"k78", "*", "PG"}], "-", 
+      RowBox[{"k85", "*", "GIT", "*", "PAKPIX"}], "+", 
+      RowBox[{"k86", "*", "PPG"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dGITPdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", "k59"}], "*", "GITFAK"}], "-", 
+      RowBox[{"k60", "*", "GITP", "*", "PEST"}], "-", 
+      RowBox[{"k79", "*", "PIX", "*", "GITP"}], "+", 
+      RowBox[{"k80", "*", "PGP"}], "-", 
+      RowBox[{"k87", "*", "GITP", "*", "PAKPIX"}], "+", 
+      RowBox[{"k88", "*", "PPGP"}]}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"dFAKdt", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k42"}], "*", "FAK", "*", "Px"}], "+", 
+      RowBox[{"k43", "*", "PxFAK"}], "+", 
+      RowBox[{"k44", "*", "PxFAK"}], "-", 
+      RowBox[{"k53", "*", "FAK", "*", "PxP"}], "+", 
+      RowBox[{"k54", "*", "PxPFAK"}], "-", 
+      RowBox[{"k55", "*", "FAK", "*", "PxTP"}], "+", 
+      RowBox[{"k56", "*", "PxTPFAK"}], "-", 
+      RowBox[{"k57", "*", "GIT", "*", "FAK"}], "+", 
+      RowBox[{"k59", "*", "GITFAK"}], "-", 
+      RowBox[{"k63", "*", "FAK", "*", "PG"}], "+", 
+      RowBox[{"k64", "*", "PGFAK"}], "+", 
+      RowBox[{"k65", "*", "PGFAK"}], " ", "-", " ", 
+      RowBox[{"k69", "*", "FAK", "*", "PPG"}], "+", 
+      RowBox[{"K70", "*", "PPGFAK"}], "+", 
+      RowBox[{"k71", "*", "PPGFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxFAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k42", "*", "Px", "*", "FAK"}], "-", 
+      RowBox[{"k43", "*", "PxFAK"}], "-", 
+      RowBox[{"k44", "*", "PxFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dGITFAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k57", "*", "GIT", "*", "FAK"}], "-", 
+      RowBox[{"k58", "*", "GITFAK"}], "-", 
+      RowBox[{"k59", "*", "GITFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPGFAKdt", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"k63", "*", "FAK", "*", "PG"}], "-", 
+      RowBox[{"k64", "*", "PGFAK"}], "-", 
+      RowBox[{"k65", "*", "PGFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPPGFAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k69", "*", "FAK", "*", "PPG"}], "-", 
+      RowBox[{"k70", "*", "PPGFAK"}], "-", 
+      RowBox[{"k71", "*", "PPGFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxTPFAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k55", "*", "FAK", "*", "PxTP"}], "-", 
+      RowBox[{"k56", "*", "PxTPFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxPFAKdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k53", "*", "PxP", "*", "FAK"}], "-", 
+      RowBox[{"k54", "*", "PxPFAK"}]}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"dPESTdt", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k48"}], "*", "PEST", "*", "PxTP"}], "+", 
+      RowBox[{"k49", "*", "PxTPPEST"}], "+", 
+      RowBox[{"k50", "*", "PxTPPEST"}], "-", 
+      RowBox[{"k60", "*", "PEST", "*", "GITP"}], "+", 
+      RowBox[{"k61", "*", "GITPPEST"}], "+", 
+      RowBox[{"k62", "*", "GITPPEST"}], "-", 
+      RowBox[{"k66", "*", "PEST", "*", "PGP"}], "+", 
+      RowBox[{"k67", "*", "PGPPEST"}], "+", 
+      RowBox[{"k68", "*", "PGPPEST"}], "-", 
+      RowBox[{"k72", "*", "PEST", "*", "PPGP"}], "+", 
+      RowBox[{"k73", "*", "PPGPPEST"}], "+", 
+      RowBox[{"k74", "*", "PPGPPEST"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dGITPPESTdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k60", "*", "PEST", "*", "GITP"}], "-", 
+      RowBox[{"k61", "*", "GITPPEST"}], "-", 
+      RowBox[{"k62", "*", "GITPPEST"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPGPPESTdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k66", "*", "PEST", "*", "PGP"}], "-", 
+      RowBox[{"k67", "*", "PGPPEST"}], "-", 
+      RowBox[{"k68", "*", "PGPPEST"}]}]}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{"dPPGPPESTdt", "=", " ", 
+     RowBox[{
+      RowBox[{"k72", "*", "PEST", "*", "PPGP"}], "-", 
+      RowBox[{"k73", "*", "PPGPPEST"}], "-", 
+      RowBox[{"k74", "*", "PPGPPEST"}]}]}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{"dPxTPPESTdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k48", "*", "PEST", "*", "PxTP"}], "-", 
+      RowBox[{"k49", "*", "PxTPPEST"}], "-", 
+      RowBox[{"k50", "*", "PxTPPEST"}]}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"dCrkdt", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "k96"}], "*", "Crk", "*", "PxTP"}], "-", 
+      RowBox[{"k97", "*", "PxTPCrk"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"dPxTPCrkdt", " ", "=", 
+     RowBox[{
+      RowBox[{"k96", "*", "Crk", "*", "PxTP"}], "-", 
+      RowBox[{"k97", "*", "PxTPCrk"}], "-", 
+      RowBox[{"k98", "*", "PxTPCrk", "*", "xnRaE"}], "+", 
+      RowBox[{"k99", "*", "PxTPCrkxnRaE"}], "+", 
+      RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"dPxTPCrkxnRaEdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"k98", "*", "PxTPCrk", "*", "xnRaE"}], "-", 
+       RowBox[{"k99", "*", "PxTPCrkxnRaE"}], "-", 
+       RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"dRaEdt", " ", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k10"}], "*", "RaE", "*", "RaD"}], "+", 
+       RowBox[{"k11", "*", "RaDRaE"}], "+", 
+       RowBox[{"k12", "*", "RaDRaE"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dnRaEdt", " ", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k13"}], "*", "RaD", "*", "nRaE"}], "+", 
+       RowBox[{"k14", "*", "RaDnRaE"}], "+", 
+       RowBox[{"k15", "*", "RaDnRaE"}], "+", 
+       RowBox[{"k100", "*", "PxTPCrkxnRaE"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dxnRaEdt", " ", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k98"}], "*", "xnRaE", "*", "PxTPCrk"}], "+", 
+       RowBox[{"k99", "*", "PxTPCrkxnRaE"}]}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"dRaDRaEdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k10", "*", "RaE", "*", "RaD"}], "-", 
+       RowBox[{"k11", "*", "RaDRaE"}], "-", 
+       RowBox[{"k12", "*", "RaDRaE"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPIXdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"k16", "*", "PIX", "*", "RaD"}], "-", 
+       RowBox[{"k17", "*", "RaDPIX"}], " ", "-", " ", 
+       RowBox[{"k18", "*", "RaDPIX"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dRaDnRaEdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k13", "*", "nRaE", "*", "RaD"}], "-", 
+       RowBox[{"k14", "*", "RaDnRaE"}], " ", "-", " ", 
+       RowBox[{"k15", "*", "RaDnRaE"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPAKPIXdt", "=", " ", 
+      RowBox[{
+       RowBox[{"k19", "*", "PAKPIX", "*", "RaD"}], "-", 
+       RowBox[{"k20", "*", "RaDPAKPIX"}], " ", "-", " ", 
+       RowBox[{"k21", "*", "RaDPAKPIX"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPGdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k22", "*", "PG", "*", "RaD"}], "-", 
+       RowBox[{"k23", "*", "RaDPG"}], " ", "-", " ", 
+       RowBox[{"k24", "*", "RaDPG"}]}]}], ";", " ", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPGPdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k25", "*", "PGP", "*", "RaD"}], "-", 
+       RowBox[{"k26", "*", "RaDPGP"}], " ", "-", " ", 
+       RowBox[{"k27", "*", "RaDPGP"}]}]}], ";", " ", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPPGdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k28", "*", "PPG", "*", "RaD"}], "-", 
+       RowBox[{"k29", "*", "RaDPPG"}], " ", "-", " ", 
+       RowBox[{"k30", "*", "RaDPPG"}]}]}], ";", " ", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPPGPdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k31", "*", "PPGP", "*", "RaD"}], "-", 
+       RowBox[{"k32", "*", "RaDPPGP"}], "-", " ", 
+       RowBox[{"k33", "*", "RaDPPGP"}]}]}], ";", " ", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"dPAKPIXdt", " ", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k19"}], "*", "PAKPIX", "*", "RaD"}], "+", 
+       RowBox[{"k20", "*", "RaDPAKPIX"}], "+", 
+       RowBox[{"k21", "*", "RaDPAKPIX"}], " ", "+", " ", 
+       RowBox[{"k75", "*", "PAK", "*", "PIX"}], "-", 
+       RowBox[{"k76", "*", "PAKPIX"}], "-", 
+       RowBox[{"k85", "*", "PAKPIX", "*", "GIT"}], " ", "+", " ", 
+       RowBox[{"k86", "*", "PPG"}], "-", 
+       RowBox[{"k87", "*", "PAKPIX", "*", "GITP"}], "+", 
+       RowBox[{"k88", "*", "PPGP"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dPGdt", " ", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k22"}], "*", "PG", "*", "RaD"}], "+", 
+       RowBox[{"k23", "*", "RaDPG"}], "+", 
+       RowBox[{"k24", "*", "RaDPG"}], "-", 
+       RowBox[{"k63", "*", "PG", "*", "FAK"}], "+", 
+       RowBox[{"k64", "*", "PGFAK"}], "+", 
+       RowBox[{"k68", "*", "PGPPEST"}], "+", 
+       RowBox[{"k77", "*", "PIX", "*", "GIT"}], "-", 
+       RowBox[{"k78", "*", "PG"}], "-", 
+       RowBox[{"k81", "*", "PG", "*", "PAK"}], "+", 
+       RowBox[{"k82", "*", "PPG"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dPGPdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"k25", "*", "PGP", "*", "RaD"}], "-", 
+       RowBox[{"k26", "*", "RaDPGP"}], "+", 
+       RowBox[{"k27", "*", "RaDPGP"}], "+", 
+       RowBox[{"k65", "*", "PGFAK"}], "-", 
+       RowBox[{"k66", "*", "PEST", "*", "PGP"}], "+", 
+       RowBox[{"k67", "*", "PGPPEST"}], "+", 
+       RowBox[{"k79", "*", "PIX", "*", "GITP"}], "-", 
+       RowBox[{"k80", "*", "PGP"}], "-", 
+       RowBox[{"k83", "*", "PAK", "*", "PGP"}], "+", 
+       RowBox[{"k84", "*", "PPGP"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dPPGdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k28"}], "*", "PPG", "*", "RaD"}], "+", 
+       RowBox[{"k29", "*", "RaDPPG"}], "+", 
+       RowBox[{"k30", "*", "RaDPPG"}], "-", 
+       RowBox[{"k69", "*", "PPG", "*", "FAK"}], "+", 
+       RowBox[{"k70", "*", "PPGFAK"}], "+", 
+       RowBox[{"k74", "*", "PPGPPEST"}], "+", 
+       RowBox[{"k81", "*", "PG", "*", "PAK"}], "-", 
+       RowBox[{"k82", "*", "PPG"}], "+", 
+       RowBox[{"k85", "*", "GIT", "*", "PAKPIX"}], "-", 
+       RowBox[{"k86", "*", "PPG"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dPPGPdt", " ", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k31"}], "*", "PPGP", "*", "RaD"}], " ", "+", 
+       RowBox[{"k32", "*", "RaDPPGP"}], "+", 
+       RowBox[{"k33", "*", "RaDPPGP"}], "+", 
+       RowBox[{"k71", "*", "PPGFAK"}], "-", 
+       RowBox[{"k72", "*", "PPGP", "*", "PEST"}], "+", 
+       RowBox[{"k73", "*", "PPGPPEST"}], "+", 
+       RowBox[{"k83", "*", "PAK", "*", "PGP"}], "-", 
+       RowBox[{"k84", "*", "PPGP"}], "+", 
+       RowBox[{"k87", "*", "GITP", "*", "PAKPIX"}], "-", 
+       RowBox[{"k88", "*", "PPGP"}], "-", 
+       RowBox[{"k89", "*", "PPGP", "*", "PxP"}], "+", 
+       RowBox[{"k90", "*", "PPGPPxP"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dPPGPPxPdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k34"}], "*", "RaD", "*", "PPGPxP"}], "+", 
+       RowBox[{"k35", "*", "RaDPPGPPxP"}], "+", 
+       RowBox[{"k36", "*", "RaDPPGPxP"}], "+", 
+       RowBox[{"k89", "*", "PPGP", "*", "PxP"}], "-", 
+       RowBox[{"k90", "*", "PPGPPxP"}], "-", 
+       RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], "-", 
+       RowBox[{"k92", "*", "Quart"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dQuartdt", " ", "=", 
+      RowBox[{
+       RowBox[{"k91", "*", "RaT", "*", "PPGPPxP"}], "-", 
+       RowBox[{"k92", "*", "Quart"}], "-", 
+       RowBox[{"k93", "*", "Px", "*", "Quart"}], "+", 
+       RowBox[{"k94", "*", "PxQuart"}], "+", 
+       RowBox[{"k95", "*", "PxQuart"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dPxQuartdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"+", "k93"}], "*", "Px", "*", "Quart"}], " ", "-", " ", 
+       RowBox[{"k94", "*", "PxQuart"}], "-", 
+       RowBox[{"k95", "*", "PxQuart"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dRaDPPGPPxPdt", "=", " ", 
+      RowBox[{
+       RowBox[{"k34", "*", "RaD", "*", "PPGPPxP"}], " ", "-", " ", 
+       RowBox[{"k35", "*", "RaDPPGPPxP"}], " ", "-", " ", 
+       RowBox[{"k36", "*", "RaDPPGPPxP"}]}]}], ";", " ", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"dRhDRhEdt", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"+", "k1"}], "*", "RhE", "*", "RhD"}], "-", 
+       RowBox[{"k2", "*", "RhDRhE"}], "-", 
+       RowBox[{"k3", "*", "RhDRhE"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dRhEdt", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "k1"}], "*", "RhE", "*", "RhD"}], "+", 
+       RowBox[{"k2", "*", "RhDRhE"}], "+", 
+       RowBox[{"k3", "*", "RhDRhE"}]}]}], ";"}]}], "\[IndentingNewLine]", 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"simp", "//", "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.8219152450426273`*^9, 3.821915269826429*^9}, {
+  3.821915491264242*^9, 
+  3.8219155228090305`*^9}},ExpressionUUID->"db3bdf06-3910-461e-8369-\
+18e9e06b9758"],
+
+Cell[BoxData[
+ RowBox[{"{", "Null", "}"}]], "Output",
+ CellChangeTimes->{3.8219152714074893`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"dcad1ddd-2091-4654-94d2-d84c66b2c04f"],
+
+Cell[BoxData[
+ RowBox[{"{", "Null", "}"}]], "Output",
+ CellChangeTimes->{3.82191527141146*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"9570a37a-6fb3-4c1e-bfe4-2c978aed8955"]
+}, Open  ]]
+},
+WindowSize->{1943, 1177},
+WindowMargins->{{252, Automatic}, {67, Automatic}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e8a64b51-c3c7-46c9-baac-6052b978e955"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 31661, 841, 6381, "Input",ExpressionUUID->"6308a2b3-e5b5-4395-b960-19f555e985e3"],
+Cell[CellGroupData[{
+Cell[32244, 865, 239, 7, 60, "Input",ExpressionUUID->"945481cb-89a5-4dab-a96f-793f49b914fe"],
+Cell[32486, 874, 261, 7, 68, "Output",ExpressionUUID->"9aaee968-907b-4ae9-89da-f800b7facede"]
+}, Open  ]],
+Cell[32762, 884, 3453, 64, 701, "Input",ExpressionUUID->"f1e57721-1e24-4b87-a411-2f231fdc200f"],
+Cell[CellGroupData[{
+Cell[36240, 952, 134, 3, 60, "Input",ExpressionUUID->"ed9c16a7-aa9e-4a75-88b8-f7b823fdb0e3"],
+Cell[36377, 957, 3259, 78, 389, "Output",ExpressionUUID->"0afa8cbd-0ff3-46dc-9bc1-d5e540cf301b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39673, 1040, 369, 10, 60, "Input",ExpressionUUID->"baa0b4c3-1c0f-4d0c-bba5-64c049f813ba"],
+Cell[40045, 1052, 882, 21, 91, "Output",ExpressionUUID->"282f17d4-f390-4ccc-ad29-dc799310b1fa"]
+}, Open  ]],
+Cell[40942, 1076, 225, 5, 60, "Input",ExpressionUUID->"2d3b963f-cfb9-4cee-abb5-feabd12d0c0d"],
+Cell[CellGroupData[{
+Cell[41192, 1085, 27178, 640, 5821, "Input",ExpressionUUID->"db3bdf06-3910-461e-8369-18e9e06b9758"],
+Cell[68373, 1727, 175, 3, 68, "Output",ExpressionUUID->"dcad1ddd-2091-4654-94d2-d84c66b2c04f"],
+Cell[68551, 1732, 172, 3, 68, "Output",ExpressionUUID->"9570a37a-6fb3-4c1e-bfe4-2c978aed8955"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,11 @@
+NDIM=   7, NPAR=   29, IPS =   1, IRS =   0, ILP =   1
+parnames = { 1: 'kon1', 2: 'koff1', 3: 'kon2', 4: 'koff2', 5: 'kfs', 6: 'L', 7: 'n', 8: 'B', 9: 'I_rho',10: 'L_rho',12: 'delta_rho',13: 'L_R',14: 'I_R',15: 'delta_R',16: 'alpha_R',17: 'delta_P',18: 'I_K',19: 'k_X',20: 'k_G',21: 'k_C',22: 'PIX',23: 'Paxtot',24: 'm',25: 'alpha_PAK',26: 'Rho_Square',27: 'Rac_Square',28: 'Pax_Square',29: 'PAKtot'}
+unames = {1: 'PaxFAK',2: 'Paxs',3: 'PaxsFAK',4: 'PaxGIT',5: 'PaxsGIT',6: 'Rac',7: 'Rho'}
+ICP =  [1]
+NTST=  50, NCOL=   4, IAD =   3, ISP =   2, ISW = 1, IPLT= 0, NBC= 0, NINT= 0
+NMX= 10000000, NPR=  10000, MXBF=  10, IID =   2, ITMX= 8, ITNW= 5, NWTN= 3, JAC= 0
+EPSL= 1e-7, EPSU = 1e-7, EPSS = 1e-05
+DS  =   0.001, DSMIN= 0.0000001, DSMAX=   0.05, IADS=   1
+THL =  {11: 0.0}, THU =  {}
+UZSTOP={}
+UZR={}

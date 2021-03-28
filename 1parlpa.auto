@@ -1,0 +1,32 @@
+
+lpa = load('chem_Dawn_Kathy_LPA')
+ode = load('chem_Dawn_Kathy')
+pars = ['kon1','koff1','kon2','koff2','kfs','L','n','B','I_rho','L_rho','delta_rho','L_R','I_R','delta_R','alpha_R','delta_P','I_K','k_X','k_G','k_C','PIX','Paxtot','m','alpha_PAK','Rho_Square','Rac_Square','Pax_Square','PAKtot']
+
+
+#       'kon1'    'koff1'   'kon2'  'koff2'  'kfs'      'L'     'n'    'B'   'I_rho' 'L_rho' 'delta_rho' 'L_R'    'I_R' 'delta_R','alpha_R','delta_P',  'I_K',    'k_X',   'k_G'   'k_C'   'PIX'   'Paxtot'  'm'  'alp_PAK''Rh_Sq'  'Ra_Sq'  'Pax_Sq'  'PAKtot'
+lpa_bmx = [[1.48114E+03,0],[1.04931E+03,0]]
+ 
+soi = ['B','kon2','kfs']
+
+for i in range(len(pars)):
+	if pars[i] not in soi:
+		continue
+
+	print('1 prameter bifurcation in:' + pars[i])
+	#add endpoints to avoid MX in both directions
+	r0 = run(lpa,ICP=[pars[i]],NMX=600,SP=['BP2'],IPLT=11)
+	r0 += run(lpa, DS='-', ICP=[pars[i]],NMX=600,SP=['BP2'],IPLT=11)
+
+	r1 = run(ode,ICP=[pars[i]],NMX=6000,SP=['BP2','LP0'])
+	r1 += run(ode, DS='-', ICP=[pars[i]],NMX=6000,SP=['BP2','LP0'])
+
+	#r0 = rl(r0)
+	name = 'bifin_'+pars[i]
+	#save(r0,name)
+
+	p = plot(r0, stability=True, top_title=name+'lpa')
+	p2 = plot(r1, stability=True, top_title=name,bifurcation_y='Rac')
+	#p.savefig(name+'.eps')
+	wait()
+
